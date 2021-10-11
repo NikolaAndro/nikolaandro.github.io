@@ -12,7 +12,7 @@ If you have any questions or suggestions, please send me an email.
 
 **Let's Connect ✨**
 
-- Email: nikolazeljkoandric@gmail.com
+- nikolazeljkoandric@gmail.com
 - [LinkedIn](https://www.linkedin.com/in/nikola-andric-128597179/)
 - [Github](github.com/NikolaAndro)
 - [Discord](https://discord.gg/m2YbK5RN)
