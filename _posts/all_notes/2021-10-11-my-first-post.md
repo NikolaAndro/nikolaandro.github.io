@@ -202,8 +202,69 @@ Departing variable: 2/32 or 3/24 => the final departing variable is the smallest
 
 Pivot: 4
 
+# Step 6: Creating the New Tableau
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The new tableau will be used to identify a new possible optimal solution.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1. To optimize the pivot variable, it will need to be transformed into a unit value (value of 1).  To transform the value, multiply the row containing the pivot variable by the reciprocal of the pivot value (1/4).
+
+{% highlight ruby %}
+x1  x2   s1   s2  P   R
+ 1 0.5  0.25  0   0 | 8 
+____________________|___
+                    | 
+{% endhighlight %}
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2. After the unit value has been determined, the other values in the column containing the unit value will become zero.  This is because the x1 in the first constraint is being optimized, which requires x1 in the other equations to be zero. 
+
+{% highlight ruby %}
+x1  x2   s1   s2  P   R
+ 1 0.5  0.25  0   0 | 8  <- New pivot row
+ 0                  |
+____________________|___
+                    | 
+{% endhighlight %}
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+In order to keep the tableau equivalent, the other variables not contained in the pivot column or pivot row must be calculated by using the new pivot values.  For each new value, multiply the negative of the value in the old pivot column by the value in the new pivot row that corresponds to the value being calculated.  Then add this to the old value from the old tableau to produce the new value for the new tableau.  This step can be condensed into the following equation:
+
+New tableau value = (Negative value in old tableau pivot column) x (value in new tableau pivot row) + (Old tableau value) 
+
+# Old Simplex Tableau
+{% highlight ruby %}
+x1 x2 s1 s2  P   R
+ 4  2  1  0  0 | 32  s1
+ 2  3  0  1  0 | 24  s2
+_______________|___
+-5 -4  0  0  1 | 0
+{% endhighlight %}
+
+[1][1] = (-2) * (0.5) + 3 = 2
+[1][2] = (-2) * (0.25) + 0 = -0.5
+[1][3] = (-2) * 0 + 1 = 1
+[1][4] = (-2) * 0 + 0 = 0
+[1][5] = (-2) * 8 + 24 = 8
+
+[2][1] = (5) * (0.5) + (-4) = -1.5
+[2][2] = (5) * (0.25) + 0 = 1.25
+[2][3] = (5) * (0) + 0 = 0
+[2][4] = (5) * (0) + 0 = 0
+[2][5] = (5) * (8) + 1 = 41
+
+# New Simplex Tableau
+{% highlight ruby %}
+x1   x2   s1 s2  P   R
+ 1  0.5 0.25  0  0 | 8  s1
+ 0    2 -0.5  1  0 | 8  s2
+___________________|___
+ 0 -1.5 1.25  0  0 | 41
+{% endhighlight %}
 
 
+A solution is considered optimal if all values in the bottom row are greater than or equal to zero. If negative values exist, the solution is still not optimal and a new pivot point will need to be determined.Hence, we need to repeat the process. 
 
 
 
