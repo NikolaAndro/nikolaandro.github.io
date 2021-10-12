@@ -115,7 +115,36 @@ Each solution in the above problem representation correspods to a point in the f
 
 **Note: Slack variables should not be non-negative.**
 
+Next, we add the objective function in the system above, while treating P as another variable.
 
+
+{% highlight ruby %}
+#=>Original Objective:
+P = 5x1 + 4x2
+
+#=> Can be written as:
+-5x1 - 4x2 + P = 0
+
+#=>Final system:
+4x1 + 2x2 + s1 = 32
+2x1 + 3x2 + s2 = 24
+-5x1 - 4x2 + P = 0
+x1, x2, s1, s2 >= 0
+{% endhighlight %}
+
+The above system is also called the **initial system**. 
+Again, every solution of the initial system (taking into account nonnegative constrains) corresponds to 
+some point in the feasible region of the original LP (andvice versa!).
+**Therefore, one of the solution of the initial system should be an optimal
+solution of the original LP (if any exists)**.
+
+Let's introduce couple of definitions:
+
+**Basic Solution** - This is one of many solutions of the original system. This solution has all variables set to 0. Hence, this solution is the origin of the graph.
+
+**Basic Feasible Solution** - If a basic solution of the initial system corresponds to a certain point in the feasible region of the original LP, then it is called a basic feasible solution.
+
+Here is how feasbile region of our original problem looks like:
 
 
 
