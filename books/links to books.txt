@@ -1,0 +1,9 @@
+http://ciml.info/ - Course in Machine Learning
+
+http://guidetodatamining.com/ - A Programmer's Guide to Data Mining
+
+https://dataminingbook.info/book_html/ - Data Mining and Machine Learning
+
+http://www.freeopen.org/?p=85  -  KB – Neural Data Mining with Python sources
+
+
