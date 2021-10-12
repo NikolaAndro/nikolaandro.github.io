@@ -31,9 +31,9 @@ In order to tackle the simplex method, we must know the standard form of a stand
 The form is as follows:
 
 {% highlight ruby %}
-# Objective function:
+#=>Objective function:
 P = c1 * x1 + c2 * x2 + . . . + cn * xn
-# Constraints:
+#=> Constraints:
 a11 * x1 + a12 * x2 + . . . + a1n * xn ≤ b1
 ···
 am1 * x1 + am2 * x2 + . . . + amn * xn ≤ bm
