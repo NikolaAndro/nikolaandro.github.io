@@ -41,6 +41,31 @@ x1 , x2 , . . . , xn ≥ 0
 
 {% endhighlight %}
 
+where x1 , x2 , . . . , xn are decision variables, c1 , . . . , cn ,
+a11 , . . . , amn are any real numbers, and b1 , . . . , bm ≥ 0 are
+nonnegative real numbers.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+We will follow the list of steps to complete LP problem using Simplex method:
+
+    • Standard form
+    • Introducing slack variables
+    • Creating the tableau
+    • Pivot variables
+    • Creating a new tableau
+    • Checking for optimality
+    • Identify optimal values
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
