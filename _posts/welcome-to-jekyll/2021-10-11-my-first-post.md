@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "My first post!"
+title:  "Dynamic Programming"
 date:   2021-10-11 09:29:20 +0700
 categories: post
 ---
