@@ -5,7 +5,12 @@ date:   2021-10-12 09:29:20 +0700
 categories: post
 ---
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Simplex method is a technique for solving linear programs. It can be done by hand or using computers (ex. using solver in Excel).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Pre-Req: Linear Programming, also called as linear optimization, is a method to achieve the best outcome in a mathematical model with constraints represented by linear relationships.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Simplex algorithm is a method used in mathematical optimization to solve linear programming problems. It can be done by hand or using computers (ex. using solver in Excel).
+Furthermore, Simplex method is used to solve maximization problems (every minimization problem can be converted to a maximization problem).
 We know that every linear programming (LP) problem has basic solutions. We could check all the solutions for optimality and feasibility
 one by one and get our optimal solution. This is simple when our LP problem has a small number of variables. However, most of the real-world
 LP problems have many variables and a huge number of constraints. Checking each possible solution would take a great amount of time. 
@@ -17,9 +22,14 @@ basic solutions which would be sufficient to check in order to identify the opti
 solution. Staring from some basic feasible solution called initial basic feasible
 solution, the simplex method moves along the edges of the polyhedron (vertices
 of which are basic feasible solutions) in the direction of increase of the
-objective function until it reaches the optimal solution.
+objective function until it reaches the optimal solution. We can see the graphical representation of simplex method in the following image.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ![simplex representation](../../assets/posts_images/simplex_0.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+In order to tackle the simplex method, we must know the standard form of a linear programming problem. 
+The form is as follows:
+
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
