@@ -50,9 +50,9 @@ We will follow the list of steps to complete LP problem using Simplex method:
 
     • Standard form
     • Introducing slack variables
-    • Creating the tableau
+    • Creating the simplex tableau
     • Pivot variables
-    • Creating a new tableau
+    • Creating a new simplex tableau
     • Checking for optimality
     • Identify optimal values
 
@@ -148,6 +148,22 @@ Here is how feasbile region of our original problem looks like:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ![simplex representation](../../assets/posts_images/simplex_1.png)
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+In 2-dimensional case (2 decision variables), the set of basic solutions
+is the of pairwise intersections of boundary lines of all problem con-
+straints. In turn, the set of basic feasible solutions is the set of the
+corner points.
+
+# Spep 3: Creating a Simplex Tableau
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The simplex method utilizes matrix representation of the initial system
+while performing search for the optimal solution. This matrix repre-
+sentation is called **simplex tableau**. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The simplex tableau consists of coefficients corresponding to the linear constraint variables and the coefficients of the objective function.  
+In the tableau below, the first two rows represent the linear constraint variable coefficients from the linear programming model, and the last row represents the objective function variable coefficients.
 
 
 
@@ -157,6 +173,18 @@ Here is how feasbile region of our original problem looks like:
 
 
 
+
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
