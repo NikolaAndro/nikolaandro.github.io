@@ -198,7 +198,7 @@ To do this, we need to determine what is our **entering variable and departing v
 
 Entering variable: -5
 
-Departing variable: 2/32 or 3/24 => the final departing variable is the smallest positive ratio, which is 2/32. Hence, the departing variable is s1.
+Departing variable: 32/4 or 24/2 => the final departing variable is the smallest positive ratio, which is 32/4. Hence, the departing variable is s1.
 
 Pivot: 4
 
@@ -225,7 +225,7 @@ x1  x2   s1   s2  P   R
  1 0.5  0.25  0   0 | 8  <- New pivot row
  0                  |
 ____________________|___
-                    | 
+ 0                  | 
 {% endhighlight %}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -233,7 +233,7 @@ In order to keep the tableau equivalent, the other variables not contained in th
 
 New tableau value = (Negative value in old tableau pivot column) x (value in new tableau pivot row) + (Old tableau value) 
 
-# Old Simplex Tableau
+**Old Simplex Tableau**
 {% highlight ruby %}
 x1 x2 s1 s2  P   R
  4  2  1  0  0 | 32  s1
@@ -258,61 +258,124 @@ _______________|___
 
 [2][3] = (5) * (0) + 0 = 0
 
-[2][4] = (5) * (0) + 0 = 0
+[2][4] = (5) * (0) + 1 = 1
 
-[2][5] = (5) * (8) + 1 = 41
+[2][5] = (5) * (8) + 0 = 40
 
-# New Simplex Tableau
+**New Simplex Tableau**
 {% highlight ruby %}
 x1   x2   s1 s2  P   R
  1  0.5 0.25  0  0 | 8  s1
  0    2 -0.5  1  0 | 8  s2
 ___________________|___
- 0 -1.5 1.25  0  0 | 41
+ 0 -1.5 1.25  0  1 | 40
 {% endhighlight %}
 
 
 A solution is considered optimal if all values in the bottom row are greater than or equal to zero. If negative values exist, the solution is still not optimal and a new pivot point will need to be determined.Hence, we need to repeat the process. 
 
+Entering variable: -1.5
 
+Departing variable: 8/0.5 or 8/2 => the final departing variable is the smallest positive ratio, which is 8/2. Hence, the departing variable is s2.
 
+Pivot: 2
 
-
-
-
-
-
-
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-Jekyll requires blog post files to be named according to the following format:
-
-`YEAR-MONTH-DAY-title.MARKUP`
-
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
-Jekyll also offers powerful support for code snippets:
+Multiply the whole pivot row by 1/0.5 => 2. We get the following row:
 
 {% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
+x1  x2    s1   s2  P    R
+ 0   1 -0.25  0.5  0 |  4 
+_____________________|___
+                     | 
 {% endhighlight %}
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+Make the pivot column all zeros besides the pivot.
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+{% highlight ruby %}
+x1  x2    s1   s2  P    R
+ 0   1 -0.25  0.5  0 |  4 <- New tableau pivot row
+     0               |
+_____________________|___
+     0               | 
+{% endhighlight %}
+
+Update the rest of the tableau:
+
+New tableau value = (Negative value in old tableau pivot column) x (value in new tableau pivot row) + (Old tableau value) 
+
+**Old Simplex Tableau**
+
+{% highlight ruby %}
+x1   x2   s1 s2  P   R
+ 1  0.5 0.25  0  0 | 8  s1
+ 0    2 -0.5  1  0 | 8  s2
+___________________|___
+ 0 -1.5 1.25  0  1 | 40
+{% endhighlight %}
+
+[0][0] = (-0.5) * 0 + 1 = 1
+
+[0][2] = (-0.5) * (-0.25) + (-0.25) = 0.375
+
+[0][2] = (-0.5) * 0.5 + 0 = -0.25
+
+[0][2] = (-0.5) * 0 + 0 = 0
+
+[0][2] = (-0.5) * 4 + 8 = 6
+
+[2][0] = (1.5) * 0 + 0 = 0
+
+[2][0] = (1.5) * (-0.25) + 1.25 = 0.875
+
+[2][0] = (1.5) * 0.5 + 0 = 0.75
+
+[2][0] = (1.5) * 0 + 1 = 1
+
+[2][0] = (1.5) * 4 + 40 = 46
+
+**New Simplex Tableau**
+
+{% highlight ruby %}
+x1  x2     s1    s2  P    R
+ 1   0  0.375 -0.25  0 |  6
+ 0   1 -0.25    0.5  0 |  4 
+_______________________|___
+ 0   0  0.875  0.75  1 | 46
+{% endhighlight %}
+
+# Step 7: Check Optimality
+
+We can now see that we do not have any negative values for our bottom row. This means that we reached our optimum.
+
+# Step 8: Identify Optimal Values
+
+To identify the optimal values, we need to identify basic and non-basic variables. 
+A basic variable can be classified to have a single 1 value in its column and the rest be all zeros.  
+If a variable does not meet this criteria, it is considered non-basic.  
+If a variable is non-basic it means the optimal solution of that variable is zero. 
+If a variable is basic, the row that contains the 1 value will correspond to the R value.  
+The R value will represent the optimal solution for the given variable. 
+
+Basic variables: x1,x2, P
+Non-basic variables: s1,s2
+
+For the variable x1, the 1 is found in the first row.  This shows that the optimal x1 value is found in the first row of the R values, which is 6. Hence x1 = 6.
+
+For the variable x2, the 1 is found in the second row.  This shows that the optimal x2 value is found in the second row of the R values, which is 4. Hence x2 = 4.
+
+For the variable P, the 1 is found in the third row.  This shows that the optimal P value is found in the third row of the R values, which is 46.
+
+**Note:** If any s was to be a basic variable, the solution to it would not be included into the final objective function.
+
+The optimal value is found by having:
+
+x1 = 6
+
+x2 = 4
+
+P = 46
+
+s1, s2 = 0
+
+Hence, P = 5x1 + 4x2 => 46 = 5 * 6 + 4 * 4 is the `optimal solution` we were looking for. 
+
