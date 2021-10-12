@@ -63,9 +63,9 @@ First of all, we need to make sure our problem is in the standard form.
 Standard form is necessary because it creates an ideal starting point for solving the Simplex method.
 Before solving for the optimal solution, we must know that standard form has three requirements:
 
-    (1) must be a maximization problem, 
-    (2) all linear constraints must be in a less-than-or-equal-to inequality, 
-    (3) all variables are non-negative. 
+    (1) must be a maximization problem
+    (2) all linear constraints must be in a less-than-or-equal-to inequality
+    (3) all variables are non-negative
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 To transform a minimization linear program model into a maximization linear program model, all we need to do is to
