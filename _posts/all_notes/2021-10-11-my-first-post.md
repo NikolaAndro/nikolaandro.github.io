@@ -59,7 +59,7 @@ We will follow the list of steps to complete LP problem using Simplex method:
 # Step 1: Conversion to Standard Form
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-First of all, we need to make sure our problem is in the standard form. 
+First of all, we need to make sure our problem is in the **standard form**. 
 Standard form is necessary because it creates an ideal starting point for solving the Simplex method.
 Before solving for the optimal solution, we must know that standard form has three requirements:
 
@@ -102,9 +102,19 @@ Finally, we converted our minimization linear program model into a maximization 
 # Step 2: Determine Slack Variables
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+**Slack variables** are additional variables that are introduced into the linear constraints of a linear program to transform them from inequality constraints to equality constraints. For each problem constraint of the original problem we introduce a single slack variable as follows:
 
+{% highlight ruby %}
+4x1 + 2x2 + s1 = 32
+2x1 + 3x2 + s2 = 24
+x1, x2, s1, s2 >= 0
+{% endhighlight %}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Each solution in the above problem representation correspods to a point in the feasible region of the original problem.
+
+**Note: Slack variables should not be non-negative.**
+
 
 
 
