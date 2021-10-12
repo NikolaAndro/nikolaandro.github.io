@@ -57,6 +57,11 @@ We will follow the list of steps to complete LP problem using Simplex method:
     • Identify optimal values
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+First of all, we need to make sure our problem is in the standard form. 
+Before solving for the optimal solution and standard form has three requirements: 
+    (1) must be a maximization problem, 
+    (2) all linear constraints must be in a less-than-or-equal-to inequality, 
+    (3) all variables are non-negative. 
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
