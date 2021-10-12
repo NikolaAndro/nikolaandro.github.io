@@ -58,14 +58,43 @@ We will follow the list of steps to complete LP problem using Simplex method:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 First of all, we need to make sure our problem is in the standard form. 
-Before solving for the optimal solution and standard form has three requirements: 
+Standard form is necessary because it creates an ideal starting point for solving the Simplex method.
+Before solving for the optimal solution, we must know that standard form has three requirements:
+
     (1) must be a maximization problem, 
     (2) all linear constraints must be in a less-than-or-equal-to inequality, 
     (3) all variables are non-negative. 
 
-
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+To transform a minimization linear program model into a maximization linear program model, all we need to do is to
+multiply both sides of objective function by -1. 
+ 
+{% highlight ruby %}
+#=>Objective function:
+-P = -5x1 - 4x2
 
+#=>Objective function Conversion:
+(-1) * (-P = -5x1 - 4x2) = P = 5x1 + 4x2
+{% endhighlight %}
+
+The same process is being applied to constraints that are in the form of greater-than-or-equal sign. 
+To convert those constraints in the form of less-than-or-equal sign, simply pultiply the equation by -1.
+
+{% highlight ruby %}
+#=>Original Constraints:
+-4x1 - 2x2 >= -32
+2x1 + 3x2 <= 24
+x1, x2 >= 0
+
+#=>Constraint Conversion:
+(-1) * (-4x1 - 2x2 >= -32) = 4x1 + 2x2 <= 32
+
+#=>Final set of constraints:
+4x1 + 2x2 <= 32
+2x1 + 3x2 <= 24
+x1, x2 >= 0
+{% endhighlight %}
+    
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
