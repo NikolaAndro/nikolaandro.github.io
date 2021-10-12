@@ -56,6 +56,8 @@ We will follow the list of steps to complete LP problem using Simplex method:
     • Checking for optimality
     • Identify optimal values
 
+# Step 1: Conversion to Standard Form
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 First of all, we need to make sure our problem is in the standard form. 
 Standard form is necessary because it creates an ideal starting point for solving the Simplex method.
@@ -94,12 +96,27 @@ x1, x2 >= 0
 2x1 + 3x2 <= 24
 x1, x2 >= 0
 {% endhighlight %}
-    
+
+Finally, we converted our minimization linear program model into a maximization linear program model in standard form.
+
+# Step 2: Determine Slack Variables
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+
+
+
+
+
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
