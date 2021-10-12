@@ -27,8 +27,19 @@ objective function until it reaches the optimal solution. We can see the graphic
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ![simplex representation](../../assets/posts_images/simplex_0.png)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-In order to tackle the simplex method, we must know the standard form of a linear programming problem. 
+In order to tackle the simplex method, we must know the standard form of a standard maximization problem. 
 The form is as follows:
+
+{% highlight ruby %}
+# Objective function:
+P = c1 * x1 + c2 * x2 + . . . + cn * xn
+# Constraints:
+a11 * x1 + a12 * x2 + . . . + a1n * xn ≤ b1
+···
+am1 * x1 + am2 * x2 + . . . + amn * xn ≤ bm
+x1 , x2 , . . . , xn ≥ 0
+
+{% endhighlight %}
 
 
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
