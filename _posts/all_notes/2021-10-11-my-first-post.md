@@ -166,11 +166,43 @@ The simplex tableau consists of coefficients corresponding to the linear constra
 In the tableau below, the first two rows represent the linear constraint variable coefficients from the linear programming model, and the last row represents the objective function variable coefficients.
 
 {% highlight ruby %}
- 4  2 1 0 0 | 32
- 2  3 0 1 0 | 24
-____________|___
--5 -4 0 0 1 | 0
+x1 x2 s1 s2  P   R
+ 4  2  1  0  0 | 32  s1
+ 2  3  0  1  0 | 24  s2
+_______________|___
+-5 -4  0  0  1 | 0
 {% endhighlight %}
+
+# Step 4: Check Optimality
+
+The optimal solution of a maximization linear programming model are the values assigned to the variables in the objective function to give the largest P value.
+The optimal solution would exist on the corner points of the graph of the entire model.  To check optimality using the tableau, all values in the last row must contain values greater than or equal to zero. If a value is less than zero, it means that variable has not reached its optimal value.  As seen in the previous tableau, two negative values exists in the bottom row indicating so this solution is not optimal.  If a tableau is not optimal, the next step is to identify ** the pivot variable** to base a new tableau on.
+
+# Step 5: Identify Pivot Variable
+
+Definitions:
+
+**Basic variables** - slack variables are refered to as basic variables.
+
+**Non-basic variables** - the original variables from the objective function are refered to as non-basic variables.
+
+**Entering variable** - corresponds to the smallest (the most negative) entry in the bottom row of the tableau.
+
+**Departing variable** - corresponds to the smallest nonnegative ratio of Ri / ij , in the column determined by the entering variable.
+
+**Pivot** - entry in the simplex tableau in the entering variable’s column and the departing variable’s row (intersection).
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+In order to search for more optimal solution, we need to perform **pivot operations** on this matrix.
+To do this, we need to determine what is our **entering variable and departing variable**.
+
+Entering variable: -5
+
+Departing variable: 2/32 or 3/24 => the final departing variable is the smallest positive ratio, which is 2/32. Hence, the departing variable is s1.
+
+Pivot: 4
+
+
 
 
 
