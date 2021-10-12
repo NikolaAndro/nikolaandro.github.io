@@ -166,14 +166,15 @@ The simplex tableau consists of coefficients corresponding to the linear constra
 In the tableau below, the first two rows represent the linear constraint variable coefficients from the linear programming model, and the last row represents the objective function variable coefficients.
 
 $$
-\left(\begin{array}{cc} 
+\left(\begin{array}{ccc} 
 4 & 2 & 1 & 0 7 0\\
 2 & 3 & 0 & 1 & 0\\
 -5 & -4 & 0 & 0 & 1
 \end{array}\right)
-\left(\begin{array}{cc} 
+\left(\begin{array}{ccc} 
 32\\ 
-24
+24\\
+0
 \end{array}\right)
 $$ 
 
