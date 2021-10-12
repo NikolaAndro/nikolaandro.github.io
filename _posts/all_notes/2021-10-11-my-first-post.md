@@ -380,6 +380,8 @@ s1, s2 = 0
 
 Hence, P = 5x1 + 4x2 => 46 = 5 * 6 + 4 * 4 is the `optimal solution` we were looking for. 
 
+If we take a look at the original feasibility graph, we can see that our optimal solution is in point (6,4).
+
 # Conclusion
 
 The Simplex method is an approach for determining the optimal value of a linear program by hand.  The method produces an optimal solution to satisfy the given constraints and produce a maximum zeta value.  To use the Simplex method, a given linear programming model needs to be in standard form, where slack variables can then be introduced.  Using the tableau and pivot variables, an optimal solution can be reached.
