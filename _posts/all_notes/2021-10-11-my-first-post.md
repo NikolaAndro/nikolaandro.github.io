@@ -357,6 +357,7 @@ If a variable is basic, the row that contains the 1 value will correspond to the
 The R value will represent the optimal solution for the given variable. 
 
 Basic variables: x1,x2, P
+
 Non-basic variables: s1,s2
 
 For the variable x1, the 1 is found in the first row.  This shows that the optimal x1 value is found in the first row of the R values, which is 6. Hence x1 = 6.
@@ -379,3 +380,8 @@ s1, s2 = 0
 
 Hence, P = 5x1 + 4x2 => 46 = 5 * 6 + 4 * 4 is the `optimal solution` we were looking for. 
 
+# Conclusion
+
+The Simplex method is an approach for determining the optimal value of a linear program by hand.  The method produces an optimal solution to satisfy the given constraints and produce a maximum zeta value.  To use the Simplex method, a given linear programming model needs to be in standard form, where slack variables can then be introduced.  Using the tableau and pivot variables, an optimal solution can be reached.
+
+Nikola Andric
