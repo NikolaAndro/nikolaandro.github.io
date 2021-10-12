@@ -22,10 +22,8 @@ objective function until it reaches the optimal solution.
 ![simplex representation](../../assets/posts_images/simplex_0.png)
 
 <p align="center">
-  <a>
     <img  src="https://github.com/NikolaAndro/NikolaAndro.github.io/tree/master/assets/posts_images/simplex_0.png" >
-  </a>
- </p>
+</p>
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:
