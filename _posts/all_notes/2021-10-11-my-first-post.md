@@ -45,8 +45,7 @@ where x1 , x2 , . . . , xn are decision variables, c1 , . . . , cn ,
 a11 , . . . , amn are any real numbers, and b1 , . . . , bm ≥ 0 are
 nonnegative real numbers.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-We will follow the list of steps to complete LP problem using Simplex method:
+We will follow the list of steps to complete LP problem using Simplex method algebraically:
 
     • Standard form
     • Introducing slack variables
@@ -146,7 +145,10 @@ Let's introduce couple of definitions:
 
 Here is how feasbile region of our original problem looks like:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ![simplex representation](../../assets/posts_images/simplex_1.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+| ![simplex representation](../../assets/posts_images/simplex_1.png) |
+|:--:|
+| <b> Figure 2</b>|
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 In 2-dimensional case (2 decision variables), the set of basic solutions
@@ -154,6 +156,8 @@ is the of pairwise intersections of boundary lines of all problem con-
 straints. In turn, the set of basic feasible solutions is the set of the
 corner points.
 
+
+**Pivoting** - is a change of basis where a nonbasic variable `enters` and a basic variable `leaves` the set of basic variables., while preserving feasibility. We 
 # Spep 3: Creating a Simplex Tableau
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
