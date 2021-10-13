@@ -5,6 +5,8 @@ date:   2021-10-13 09:29:20 +0700
 categories: post
 ---
 
+****Note In Progress****
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 **Dynamic programming** solves problems by combining the solutions to subproblems. It can be
 similar to divide-and-conquer method, where problem is partitioned into disjoint subproblems,
