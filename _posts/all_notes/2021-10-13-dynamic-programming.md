@@ -24,6 +24,9 @@ In order to know when to look for a dynamic-programming solution to a problem, w
 
 # Optimal Substructure
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+A problem demonstrates an `optimal substructure` if an optimal solution to the problem, within itself, contains optimal solutions to subproblems. Hence, when we recognize such a structure, we can be sure that we can apply dynamic programming.  
+
 # Overlapping Subproblems
 
 # Memoization
