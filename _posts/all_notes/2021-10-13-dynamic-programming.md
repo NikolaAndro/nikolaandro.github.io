@@ -6,5 +6,29 @@ categories: post
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+**Dynamic programming** solves problems by combining the solutions to subproblems. It can be
+similar to divide-and-conquer method, where problem is partitioned into disjoint subproblems,
+subproblems are recursively solved and then combined to find the solution of the original problem.
+However, dynamic programming applies when the subproblems overlap - that is, when
+subproblems share subsubproblems. In this context, a divide-and-conquer algorithm does more
+work than necessary, repeatedly solving the common subsubproblems. A dynamic-programming
+algorithm solves each subsubproblem just once and then saves its answer in a table, thereby
+avoiding the work of recomputing the answer every time it solves each subsubproblems.
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Dynamic Programming is used to solve optimization problems. These type of problems can have many possible optimal solutions. Hence, the goal of dynamic programming is to find one optimal solution. 
+
+Some of the problems that can be solved using the dynamic programming:
+  - Rod Cutting
+  - Matrix-Chain Multiplication
+  - Longest Common Subsequence
+  - Coin Changing Problem
+  - Knapsack Problem
+  - Graph Problems
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Nikola Andric
