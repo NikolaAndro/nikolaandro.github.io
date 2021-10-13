@@ -18,6 +18,16 @@ avoiding the work of recomputing the answer every time it solves each subsubprob
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Dynamic Programming is used to solve optimization problems. These type of problems can have many possible optimal solutions. Hence, the goal of dynamic programming is to find one optimal solution. 
 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+In order to know when to look for a dynamic-programming solution to a problem, we need to recognize if our problem has **optimal substructure** and **overlapping subproblems**. 
+
+# Optimal Substructure
+
+# Overlapping Subproblems
+
+# Memoization
+
 Some of the problems that can be solved using the dynamic programming:
   - Rod Cutting
   - Matrix-Chain Multiplication
@@ -25,9 +35,6 @@ Some of the problems that can be solved using the dynamic programming:
   - Coin Changing Problem
   - Knapsack Problem
   - Graph Problems
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
