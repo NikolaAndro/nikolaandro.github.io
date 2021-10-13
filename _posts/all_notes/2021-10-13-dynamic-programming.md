@@ -25,9 +25,26 @@ In order to know when to look for a dynamic-programming solution to a problem, w
 # Optimal Substructure
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-A problem demonstrates an `optimal substructure` if an optimal solution to the problem, within itself, contains optimal solutions to subproblems. Hence, when we recognize such a structure, we can be sure that we can apply dynamic programming.  
+A problem demonstrates an `optimal substructure` if an optimal solution to the problem, within itself, contains optimal solutions to subproblems. Hence, when we recognize such a structure, we can be sure that we can apply dynamic programming.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The optimal solution in dynamic programming is built from the optimal solutions of the subproblems.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+When discovering optimal solution of a problem, we will follow the pattern:
+  - Show that a solution to the problem consists of making a decision/choice, such as cutting a rod, that leaves one or more subproblems to be solved using the same method.
+  - Suppose that for this problem, we were given the first decision that leads to an optimal solution.
+  - Given this choice, we need to determine which subproblems arise.
+  - Show that solutions to the subproblems used to solve the original problem are also optimal by using a `cut and paste technique`. In this technique, we assume that some piece of the optimal solution S* is not an optimal solution to a smaller subproblem. Then we need to show that replacing that piece with the optimal
+solution to the smaller subproblem improves the supposedly optimal solution S*. Therefore, that S* must include an optimal solution to a smaller subproblem.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Dynamic Programming very frequently uses optimal substructure in a `bottom-up approach`. This means that we first determine optimal solutions to subproblems and then using those optimal solutions, we find the optimal solution of the "upper level" problem. 
 
 # Overlapping Subproblems
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 # Memoization
 
