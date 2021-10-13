@@ -182,7 +182,7 @@ _______________|___
 -5 -4  0  0  1 | 0
 {% endhighlight %}
 
-**From this tableau we know that x1 and x2 is a non-basic variable, so x1 = x2 = 0. This represents our starting feasible point on the graph (0,0).**
+**From this tableau we know that x1 and x2 are non-basic variables, so x1 = x2 = 0. This represents our starting feasible point on the graph (0,0).**
 
 # Step 4: Check Optimality
 
@@ -284,7 +284,7 @@ ___________________|___
  0 -1.5 1.25  0  1 | 40
 {% endhighlight %}
 
-**From this tableau we know that x2 is a non-basic variable, so x2 = 0. We also know that x1 = 8. Hence, our next point in the feasiblel region in the Figure 2 is the point (8,0).**
+**From this tableau we know that x2 is a non-basic variable, so x2 = 0. We also know that x1 = 8. Hence, our next point in the feasible region in the Figure 2 is the point (8,0).**
 
 A solution is considered optimal if all values in the bottom row are greater than or equal to zero. If negative values exist, the solution is still not optimal and a new pivot point will need to be determined.Hence, we need to repeat the process. 
 
