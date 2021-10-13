@@ -10,7 +10,7 @@ mode: dark # default theme "dark" | "light"
 
 # Profile settings
 author:
-  name: Nikola Andric # author name
+  name: Nikola Andrić # author name
   bio: >- # tell to the world
     Notes of computer science topics. More specifically on AI, ML, Big Data Management and programming in general. My projects can be found at <a href="https://github.com/NikolaAndro" target="_blank" rel="noopener">@github</a>.
   username: username # general username
@@ -21,7 +21,7 @@ author:
   avatar: /assets/img/avatar.jpg # change with your own avatar
 
 # URL settings
-url: "https://nikolaandro.github.io/Nikola_Notes" 
+url: "https://nikolaandro.github.io/Nikola_Notes/" 
 baseurl: '/Nikola_Notes'
 permalink: /:title/
 google_analytics: # leave it blank if not wish
