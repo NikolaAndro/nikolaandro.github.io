@@ -17,14 +17,18 @@ LP problems have many variables and a huge number of constraints. Checking each 
 For example, if a problem has n = 30 decision variables and m = 35 problem constraints, thenumber of possible basic solution becomes 
 approximately 3 × 10^18 . It will take about 15 years for an average modern personal computer to check all these solutions for feasibility and optimality. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The simplex method describes a ”smart” way to find much smaller subset of
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+The simplex method describes a ”smart” way to find much smaller subset of
 basic solutions which would be sufficient to check in order to identify the optimal
 solution. Staring from some basic feasible solution called initial basic feasible
 solution, the simplex method moves along the edges of the polyhedron (vertices
 of which are basic feasible solutions) in the direction of increase of the
-objective function until it reaches the optimal solution. We can see the graphical representation of simplex method in the following image.
+objective function until it reaches the optimal solution. We can see the graphical representation of simplex method in the Figure 1.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  ![simplex representation](../../assets/posts_images/simplex_0.png)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+| ![simplex representation](../../assets/posts_images/simplex_0.png) |
+|:--:|
+| <b> Figure 1</b>|
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 In order to tackle the simplex method, we must know the standard form of a standard maximization problem. 
@@ -157,7 +161,8 @@ straints. In turn, the set of basic feasible solutions is the set of the
 corner points.
 
 
-**Pivoting** - is a change of basis where a nonbasic variable `enters` and a basic variable `leaves` the set of basic variables., while preserving feasibility. We 
+**Pivoting** - is a change of basis where a nonbasic variable `enters` and a basic variable `leaves` the set of basic variables, while preserving feasibility. We can see pivoting process in the Figure 1 shown as arrows on the edges that connect vertices X0, X1, X3, X4, X5, and X6. 
+
 # Spep 3: Creating a Simplex Tableau
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -177,6 +182,8 @@ _______________|___
 -5 -4  0  0  1 | 0
 {% endhighlight %}
 
+**From this tableau we know that x1 and x2 is a non-basic variable, so x1 = x2 = 0. This represents our starting feasible point on the graph (0,0).**
+
 # Step 4: Check Optimality
 
 The optimal solution of a maximization linear programming model are the values assigned to the variables in the objective function to give the largest P value.
@@ -186,9 +193,9 @@ The optimal solution would exist on the corner points of the graph of the entire
 
 Definitions:
 
-**Basic variables** - slack variables are refered to as basic variables.
+**Basic variables** - slack variables (s1, s2) are refered to as basic variables.
 
-**Non-basic variables** - the original variables from the objective function are refered to as non-basic variables.
+**Non-basic variables** - the original variables from the objective function are refered to as non-basic variables. If a variable is considered non-basic, the value of that variable is equal to zero.
 
 **Entering variable** - corresponds to the smallest (the most negative) entry in the bottom row of the tableau.
 
@@ -206,17 +213,19 @@ Departing variable: 32/4 or 24/2 => the final departing variable is the smallest
 
 Pivot: 4
 
+**Note**: if departing variables happend to have the same ratio, we would need to pick the variable with smaller index.
+
 # Step 6: Creating the New Tableau
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 The new tableau will be used to identify a new possible optimal solution.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-1. To optimize the pivot variable, it will need to be transformed into a unit value (value of 1).  To transform the value, multiply the row containing the pivot variable by the reciprocal of the pivot value (1/4).
+1. To optimize the pivot variable, it will need to be transformed into a unit value (value of 1). To transform the value, multiply the row containing the pivot variable by the reciprocal of the pivot value (1/4). Once that is done, we have changed the base, where non-basic variable x1 entered and basic variable s1 left the set of basic variables (they exchanged).
 
 {% highlight ruby %}
-x1  x2   s1   s2  P   R
- 1 0.5  0.25  0   0 | 8 
+s1  x2   s1   s2  P   R
+ 1 0.5  0.25  0   0 | 8 x1
 ____________________|___
                     | 
 {% endhighlight %}
@@ -225,8 +234,8 @@ ____________________|___
 2. After the unit value has been determined, the other values in the column containing the unit value will become zero.  This is because the x1 in the first constraint is being optimized, which requires x1 in the other equations to be zero. 
 
 {% highlight ruby %}
-x1  x2   s1   s2  P   R
- 1 0.5  0.25  0   0 | 8  <- New pivot row
+s1  x2   s1   s2  P   R
+ 1 0.5  0.25  0   0 | 8  x1 <- New pivot row
  0                  |
 ____________________|___
  0                  | 
@@ -268,13 +277,14 @@ _______________|___
 
 **New Simplex Tableau**
 {% highlight ruby %}
-x1   x2   s1 s2  P   R
- 1  0.5 0.25  0  0 | 8  s1
+s1   x2   s1 s2  P   R
+ 1  0.5 0.25  0  0 | 8  x1
  0    2 -0.5  1  0 | 8  s2
 ___________________|___
  0 -1.5 1.25  0  1 | 40
 {% endhighlight %}
 
+**From this tableau we know that x2 is a non-basic variable, so x2 = 0. We also know that x1 = 8. Hence, our next point in the feasiblel region in the Figure 2 is the point (8,0).**
 
 A solution is considered optimal if all values in the bottom row are greater than or equal to zero. If negative values exist, the solution is still not optimal and a new pivot point will need to be determined.Hence, we need to repeat the process. 
 
@@ -284,11 +294,11 @@ Departing variable: 8/0.5 or 8/2 => the final departing variable is the smallest
 
 Pivot: 2
 
-Multiply the whole pivot row by 1/0.5 => 2. We get the following row:
+Multiply the whole pivot row by 1/0.5 => 2. Once we exchange the basic and non-basic variables, we get the following row:
 
 {% highlight ruby %}
-x1  x2    s1   s2  P    R
- 0   1 -0.25  0.5  0 |  4 
+s1  s2    s1   s2  P    R
+ 0   1 -0.25  0.5  0 |  4 x2
 _____________________|___
                      | 
 {% endhighlight %}
@@ -296,8 +306,8 @@ _____________________|___
 Make the pivot column all zeros besides the pivot.
 
 {% highlight ruby %}
-x1  x2    s1   s2  P    R
- 0   1 -0.25  0.5  0 |  4 <- New tableau pivot row
+s1  s2    s1   s2  P    R
+ 0   1 -0.25  0.5  0 |  4  x2 <- New tableau pivot row
      0               |
 _____________________|___
      0               | 
@@ -310,8 +320,8 @@ New tableau value = (Negative value in old tableau pivot column) x (value in new
 **Old Simplex Tableau**
 
 {% highlight ruby %}
-x1   x2   s1 s2  P   R
- 1  0.5 0.25  0  0 | 8  s1
+s1   x2   s1 s2  P   R
+ 1  0.5 0.25  0  0 | 8  x1
  0    2 -0.5  1  0 | 8  s2
 ___________________|___
  0 -1.5 1.25  0  1 | 40
@@ -340,12 +350,14 @@ ___________________|___
 **New Simplex Tableau**
 
 {% highlight ruby %}
-x1  x2     s1    s2  P    R
- 1   0  0.375 -0.25  0 |  6
- 0   1 -0.25    0.5  0 |  4 
+s1  s2     s1    s2  P    R
+ 1   0  0.375 -0.25  0 |  6 x1
+ 0   1 -0.25    0.5  0 |  4 x2
 _______________________|___
  0   0  0.875  0.75  1 | 46
 {% endhighlight %}
+
+**We can see that x1 and x2 are both basic variables where x1 = 6 and x2 = 4, which is our next feasible point in the feasible region.**
 
 # Step 7: Check Optimality
 
