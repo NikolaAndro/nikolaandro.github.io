@@ -22,7 +22,7 @@ author:
 
 # URL settings
 url: "https://nikolaandro.github.io/Nikola_Notes/" 
-baseurl: '/Nikola_Notes'
+baseurl: 
 permalink: /:title/
 google_analytics: # leave it blank if not wish
 fb_appid:
