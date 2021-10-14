@@ -24,6 +24,12 @@ categories: post
  
 {% highlight ruby %}
 def fibonacci(n):
+    # Check if input is valid
+    if type(n) != int:
+        raise TypeError("n must be a positive integer!")
+    if n < 1:
+        raise ValueError("n must be a positive integer!")
+	
     # Base cases when n is 0, 1, or 2, the values are 0, 1, and 1.
     if n == 0:
         return 0
@@ -50,10 +56,20 @@ def fibonacci(n):
  fibonacci_cache = {}
 
  def fibonacci(n):
+    # Check if input is valid
+    if type(n) != int:
+        raise TypeError("n must be a positive integer!")
+    if n < 1:
+        raise ValueError("n must be a positive integer!")
+	
+ 
     # Check if n is already in the fibonacci cache. If so, return it.
     if n in fibonacci_cache:
         return fibonacci[n]
-    # Otherwise, we want to COMPUTE the value, STORE IT in cache, and RETURN it.
+    # Otherwise, we want to:
+    # COMPUTE the value, 
+    # STORE IT in cache, and 
+    # RETURN it.
     # Base cases when n is 0, 1, or 2, the values are 0, 1, and 1.
     if n == 0:
         value = 0
@@ -70,7 +86,31 @@ def fibonacci(n):
 
 {% endhighlight %}
   
+ To do this in a more clean way, we can use `lru_cache` module. LRU Cache stands for Least Recently Used Cache. 
  
+{% highlight ruby %}
+ #=> Import lru_cache from functools module
+ from functools import lru_cache
+ 
+ #=> Enter the number of values to cache. Setting it to 1000. By default, python will cache 128 most receantly used values.
+ @lru_cache(maxsize = 1000)
+ def fibonacci(n):
+    # Check if input is valid
+    if type(n) != int:
+        raise TypeError("n must be a positive integer!")
+    if n < 1:
+        raise ValueError("n must be a positive integer!")
+	
+    # Base cases when n is 0, 1, or 2, the values are 0, 1, and 1.
+    if n == 0:
+        return 0
+    if n <= 2:
+        return 1
+	
+    # Recursive calls
+    return fibonacci(n-1) + fibonacci(n-2)
+
+{% endhighlight %}
 # Bottom-Up Dynammic Programming
  
 <!-- https://sites.psu.edu/symbolcodes/codehtml/#math LINK FOR SYMBOLS IN EQUATIONS -->
