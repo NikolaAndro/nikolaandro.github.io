@@ -20,7 +20,7 @@ categories: post
 # Recursion only:
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- This approach has an exponential runtime complexity and it is too slow. It repeats the same computations again and again. Since this is a recursive approach, we first cover the base cases and then we make recursive calls.
+ This approach has an exponential runtime complexity and it is too slow. It repeats the same computations again and again. Since this is a recursive approach, we first cover the base cases and then we make recursive calls. Therefore, when trying to compute F<sub>300</sub> it would take a great amount of time. 
  
 {% highlight ruby %}
 def fibonacci(n):
@@ -34,12 +34,40 @@ def fibonacci(n):
 
 {% endhighlight %}
  
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ In order to optimize the recursive case, we can introduce memoization and keep the table of computed values in order to eliminate redundant computations. 
  
- 
-# Top-Down Dynamic Programming 
+# Top-Down Dynamic Programming (recursion + memoization)
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- In order to optimize the recursive case, we can introduce memoization and keep the table of computed values in order to eliminate redundant computations.
+ Eliminating redundant computations results in a significant speedup in execution time. 
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ First, we will implent memoization implicitly, and then we will use a built-in python tool that makes memoization trivial.
+ 
+{% highlight ruby %}
+ #=> declare the dictionary that will store computed fibonacci values
+ fibonacci_cache = {}
+
+ def fibonacci(n):
+    #=> Check if n is already in the fibonacci cache. If so, return it.
+    if n in fibonacci_cache:
+        return fibonacci[n]
+    #=> Otherwise, we want to COMPUTE the value, STORE IT in cache, and RETURN it.
+    #=> Base cases when n is 0, 1, or 2, the values are 0, 1, and 1.
+    if n == 0:
+        value = 0
+    if n <= 2:
+        value = 1
+    elif n > 2:
+        value = fibonacci(n-1) + fibonacci(n-2)
+    #=> Cache the computed value.
+    fibonacci_cache[n] = value
+    #return it
+    return value
+
+{% endhighlight %}
+  
  
 # Bottom-Up Dynammic Programming
  
