@@ -113,6 +113,42 @@ def fibonacci(n):
 {% endhighlight %}
 # Bottom-Up Dynammic Programming
  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  We are able to do this without using recursion in the bottom-up approach. 
+  
+{% highlight ruby %}
+ def fibonacci(n):
+    # Check if input is valid
+    if type(n) != int:
+        raise TypeError("n must be a positive integer!")
+    if n < 1:
+        raise ValueError("n must be a positive integer!")
+	
+    # Base cases when n is 0, 1, or 2, the values are 0, 1, and 1.
+    if n == 0:
+        return 0
+    if n <= 2:
+        return 1
+	
+    # Create a table to keep already calcucated values.
+    table = []
+
+    # Insters first 2 trivial values.
+    table.append(0)
+    table.append(1)
+    
+    # Calculate the rest of the values using the previously calculated values.
+    # Here we go from simpler solutions (bottom) to solving more
+    # complex solutions (up).
+    for i in range(2, n+1):
+        table[i] = table[i-1] + table[i-2]
+	
+    # Finally return the value that was passed
+    return table[n]
+{% endhighlight %}  
+ 
+ We can see that this problem is solved the fastest using the bottom-up dynamic programming approach. The run-time is linear.
+ 
 <!-- https://sites.psu.edu/symbolcodes/codehtml/#math LINK FOR SYMBOLS IN EQUATIONS -->
 <!-- h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x -->
  
