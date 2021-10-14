@@ -30,6 +30,10 @@ When discovering optimal solution of a problem, we will follow the pattern:
   - Show that solutions to the subproblems used to solve the original problem are also optimal by using a `cut and paste technique`. In this technique, we assume that some piece of the optimal solution S* is not an optimal solution to a smaller subproblem. Then we need to show that replacing that piece with the optimal
 solution to the smaller subproblem improves the supposedly optimal solution S*. Therefore, that S* must include an optimal solution to a smaller subproblem.
 
+In other words:
+
+Let's say you are asked to minimize the function g(x) . You know that the value of g(x) depends on g(y) and g(z) . Now if we can minimize g(x) by minimizing both g(y) and g(z) , only then we can say that the problem has optimal substructure. If g(x) is minimized by only minimizing g(y) and if minimizing or maximizing g(z) doesn't have any effect on g(x) , then this problem doesn't have optimal substructure. In simple words, if optimal solution of a problem can be found from the optimal solution of its subproblem, then we can say the problem has optimal substructure property.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Dynamic Programming very frequently uses optimal substructure in a `bottom-up approach`. This means that we first determine optimal solutions to subproblems and then using those optimal solutions, we find the optimal solution of the "upper level" problem. 
 
