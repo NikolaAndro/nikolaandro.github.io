@@ -48,6 +48,7 @@ When a recursive algorithm revisits the same problem repeatedly, we can say that
 Memoizing a recursive algorithm means maintaining solution to each problem in a table. Initially, each table entry contains a `special value` to indicate that the entry has yet to be filled in. When the subproblem is encountered for the first time, as recursive algorithm unfolds, its solution is computed and stored in the table. Each next time we visit this subproblem, we simply look up the solution of the problem in the table and return it without having to do computations for that subproblem again.  
 
 Some of the problems that can be solved using the dynamic programming:
+  - Fibonacci's Recursion
   - Rod Cutting
   - Matrix-Chain Multiplication
   - Longest Common Subsequence
