@@ -12,6 +12,7 @@ categories: post
 
 
  In this note, we will solve this problem using: 
+ 
 	- recursion only
 	- top-down dynamic programming (a.k.a. recursion + memoization)
 	- bottom-up dynammic programming 
@@ -19,7 +20,10 @@ categories: post
 # Recursion only:
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- This approach has an exponential runtime complexity and it is too slow. It repeats the same computations again and again. 
+ This approach has an exponential runtime complexity and it is too slow. It repeats the same computations again and again. Since this is a recursive approach, we first cover the base cases and then we make recursive calls.
+ 
+ 
+ 
  
  
 # Top-Down Dynamic Programming 
@@ -27,7 +31,7 @@ categories: post
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  In order to optimize the recursive case, we can introduce memoization and keep the table of computed values in order to eliminate redundant computations.
  
-
+# Bottom-Up Dynammic Programming
  
 <!-- https://sites.psu.edu/symbolcodes/codehtml/#math LINK FOR SYMBOLS IN EQUATIONS -->
 <!-- h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x -->
