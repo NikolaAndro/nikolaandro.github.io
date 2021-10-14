@@ -53,6 +53,43 @@ Now, we can take a look how this problem would evolve using cutRod(4):
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Figure 1 - Recursion Tree*
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+In this figure we can see that many subproblems are being recomputed again and again such as cR(1) and cR(2). Let's solve this using bottom-up dynamic programming approach.
+
+{% highlight ruby %}
+
+# A Dynamic Programming solution for Rod cutting problem
+INT_MIN = -32767
+ 
+# Returns the best obtainable price for a rod of length n and
+# price[] as prices of different pieces
+def cutRod(price, n):
+    val = [0 for x in range(n+1)]
+    val[0] = 0
+ 
+    # Build the table val[] in bottom up manner and return
+    # the last entry from the table
+    for i in range(1, n+1):
+        max_val = INT_MIN
+        for j in range(i):
+             # price[j] --> price of the piece from the left side of the cut
+             # val[i-j-1] -->  price of the piece from the right side of the cut
+             max_val = max(max_val, price[j] + val[i-j-1])
+        val[i] = max_val
+ 
+    return val[n]
+ 
+# Driver program to test above functions
+arr = [1, 5, 8, 9, 10, 17, 17, 20]
+size = len(arr)
+print("Maximum Obtainable Value is " + str(cutRod(arr, size)))
+
+# Code obtained from GeeksForGeeks
+
+{% endhighlight %}
+
+We can see that we only used 2 for loops and no recursion. 
+
 <!-- https://sites.psu.edu/symbolcodes/codehtml/#math LINK FOR SYMBOLS IN EQUATIONS -->
 <!-- h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x -->
  
