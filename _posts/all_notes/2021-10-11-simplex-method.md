@@ -105,7 +105,7 @@ Finally, we converted our minimization linear program model into a maximization 
 # Step 2: Determine Slack Variables
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-**Slack variables** are additional variables that are introduced into the linear constraints of a linear program to transform them from inequality constraints to equality constraints. If it was <= sign (maximization problem), we would need to add a slack variable, if it was >= sign (minimization problem) we would need to subtract a slack variable. For each problem constraint of the original problem we introduce a single slack variable as follows:
+**Slack variables** are additional variables that are introduced into the linear constraints of a linear program to transform them from inequality constraints to equality constraints. For each problem constraint of the original problem we introduce a single slack variable as follows:
 
 {% highlight ruby %}
 4x1 + 2x2 + s1 = 32
