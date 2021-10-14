@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Dynamic Programming"
+title:  "Dynamic Programming (DP)"
 date:   2021-10-13 09:29:20 +0700
 categories: post
 ---
@@ -69,7 +69,7 @@ Some of the problems that can be solved using the dynamic programming:
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-This means that dynamic Programming is not only recursion with memoization because it is still a top down approach. However, it is a *smart recursion* which is a bottom-up approach.
+This means that dynamic Programming is not only recursion with memoization because it is still a top down approach. However, it is a *smart recursion* which is a bottom-up approach. This is better explained with an [exmaple]().
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
