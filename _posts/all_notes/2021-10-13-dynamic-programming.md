@@ -32,6 +32,7 @@ solution to the smaller subproblem improves the supposedly optimal solution S*. 
 
 In other words:
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Let's say you are asked to minimize the function g(x) . You know that the value of g(x) depends on g(y) and g(z) . Now if we can minimize g(x) by minimizing both g(y) and g(z) , only then we can say that the problem has optimal substructure. If g(x) is minimized by only minimizing g(y) and if minimizing or maximizing g(z) doesn't have any effect on g(x) , then this problem doesn't have optimal substructure. In simple words, if optimal solution of a problem can be found from the optimal solution of its subproblem, then we can say the problem has optimal substructure property.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
