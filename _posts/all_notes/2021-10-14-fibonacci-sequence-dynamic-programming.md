@@ -24,12 +24,12 @@ categories: post
  
 {% highlight ruby %}
 def fibonacci(n):
-    #=> Base cases when n is 0, 1, or 2, the values are 0, 1, and 1.
+    # Base cases when n is 0, 1, or 2, the values are 0, 1, and 1.
     if n == 0:
         return 0
     if n <= 2:
         return 1
-    #=> Recursive calls
+    # Recursive calls
     return fibonacci(n-1) + fibonacci(n-2)
 
 {% endhighlight %}
@@ -50,19 +50,21 @@ def fibonacci(n):
  fibonacci_cache = {}
 
  def fibonacci(n):
-    #=> Check if n is already in the fibonacci cache. If so, return it.
+    # Check if n is already in the fibonacci cache. If so, return it.
     if n in fibonacci_cache:
         return fibonacci[n]
-    #=> Otherwise, we want to COMPUTE the value, STORE IT in cache, and RETURN it.
-    #=> Base cases when n is 0, 1, or 2, the values are 0, 1, and 1.
+    # Otherwise, we want to COMPUTE the value, STORE IT in cache, and RETURN it.
+    # Base cases when n is 0, 1, or 2, the values are 0, 1, and 1.
     if n == 0:
         value = 0
     if n <= 2:
         value = 1
     elif n > 2:
         value = fibonacci(n-1) + fibonacci(n-2)
-    #=> Cache the computed value.
+	
+    # Cache the computed value.
     fibonacci_cache[n] = value
+    
     #return it
     return value
 
