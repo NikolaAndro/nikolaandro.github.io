@@ -49,6 +49,12 @@ When a recursive algorithm revisits the same problem repeatedly, we can say that
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Memoizing a recursive algorithm means maintaining solution to each problem in a table. Initially, each table entry contains a `special value` to indicate that the entry has yet to be filled in. When the subproblem is encountered for the first time, as recursive algorithm unfolds, its solution is computed and stored in the table. Each next time we visit this subproblem, we simply look up the solution of the problem in the table and return it without having to do computations for that subproblem again.  
 
+Dynamic Programming can be represented as a 4-step method:
+  1. Characterize the recursive structure of the problem.
+  2. Recursively define the optimal solution and and its corresponding value for each subproblem.
+  3. Compute the value of an optimal solution in a bottom-up fashion.
+  4. Construct an optimal solution from computed information.
+
 Some of the problems that can be solved using the dynamic programming:
   - Fibonacci's Recursion
   - Rod Cutting
