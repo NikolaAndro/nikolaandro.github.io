@@ -113,7 +113,7 @@ def fibonacci(n):
 {% endhighlight %}
 # Bottom-Up Dynammic Programming
  
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
   We are able to do this without using recursion in the bottom-up approach. 
   
 {% highlight ruby %}
@@ -146,7 +146,8 @@ def fibonacci(n):
     # Finally return the value that was passed
     return table[n]
 {% endhighlight %}  
- 
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  We can see that this problem is solved the fastest using the bottom-up dynamic programming approach. The run-time is linear.
  
 <!-- https://sites.psu.edu/symbolcodes/codehtml/#math LINK FOR SYMBOLS IN EQUATIONS -->
