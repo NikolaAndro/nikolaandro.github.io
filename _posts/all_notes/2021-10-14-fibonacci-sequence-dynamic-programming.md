@@ -22,7 +22,17 @@ categories: post
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  This approach has an exponential runtime complexity and it is too slow. It repeats the same computations again and again. Since this is a recursive approach, we first cover the base cases and then we make recursive calls.
  
- 
+{% highlight ruby %}
+def fibonacci(n):
+    #=> Base cases when n is 0, 1, or 2, the values are 0, 1, and 1.
+    if n == 0:
+        return 0
+    if n <= 2:
+        return 1
+    #=> Recursive calls
+    return fibonacci(n-1) + fibonacci(n-2)
+
+{% endhighlight %}
  
  
  
