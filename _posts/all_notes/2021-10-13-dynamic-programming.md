@@ -5,6 +5,8 @@ date:   2021-10-13 09:29:20 +0700
 categories: post
 ---
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+**Dynamic Programming** is proposed by `Richard Bellman` in early 1950-s.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 **Dynamic programming** solves problems by combining the solutions to subproblems. It can be similar to divide-and-conquer method, where problem is partitioned into disjoint subproblems, subproblems are recursively solved and then combined to find the solution of the original problem. However, dynamic programming applies when the subproblems overlap - that is, when subproblems share subsubproblems. In this context, a divide-and-conquer algorithm does more
@@ -56,6 +58,8 @@ Some of the problems that can be solved using the dynamic programming:
   - Knapsack Problem
   - Graph Problems
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+**Dynamic Programming is not just recursion without repetition, it is a *smart* recursion.**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Nikola Andric
