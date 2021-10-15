@@ -14,15 +14,62 @@ categories: post
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Given a rod of length ***n*** inches and an array of prices ***p<sub>i;</sub>*** for i = 1,2,...n that includes prices of all pieces of size smaller than n. Determine the maximum revenue value ***r<sub>n</sub>*** obtainable by cutting up the rod and selling the pieces. Note that if piece ***p<sub>n</sub>*** for a rod of length n is large enough, an optimal   solution may equire no cutting at all.
  
- How do we meet the necessary properties for dynamic programming:
+# Recursive Approach
+
+ In this approach, we decompose the rod. The decomposition consists of the first piece of length i cut of the left hand end, and then the right-hand remainder of length *n - i*. Only the remainder from the right side can be decomposed further.  
+ 
+{% highlight ruby %}
+# p = price array
+# n = length of a rod that is being analyzed
+def cut_rod(p,n):
+    # If the lenght of the given rod is 0, no revenue is possible.
+    if n == 0:
+        return 0
+    max_revenue = -Infinity
+    for i in range (1,n+1):
+        max_revenue = max(max_revenue, p[i] + cut_rod(p, n - i))
+    return max_revenue
+
+{% endhighlight %}
+
+ For large values of *n*, this approach would be extremly slow due to many redundant operations. 
+ 
+# Dynammic Programming Approach
+ 
+ **How do we meet the necessary properties for dynamic programming?**
  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  1. Optimal Structure - We can cut the rod in different spots and compare the prices after each cut. Then we can recursively call the same function on a piece obtained after the cut. 
  2. Overlapping Subproblems - In our recursive implementation, we can see that many subproblems are repeating/overlapping.
  
+
+# Top-Down Dynamic Programming Approach
+
+ 
+
+# Bottom-up Dynamic Programming Approach
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Let cutRod(n) be the function that gives us the optimal price for the rod of the length n. The definition of the cutRod would be 
+ 
  **cutRod(n) = max(price[i] + cutRod(n - i - 1)) for all *i* in {0,1,2,...n-1}**
+ 
+ where,
+ 
+ price[j] --> price of the piece from the left side of the cut
  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Let us have an example of a table that gives lengths *i* inches of a rod and prices *p* related to each letgth of the rod.
