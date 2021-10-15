@@ -86,27 +86,92 @@ def cut_rod_top_down(prices, n, cache):
 {% highlight ruby %}
 import math
 
-# p = price array
+# price = price array
 # n = length of a rod that is being analyzed
 def cut_rod(prices,n):
     # Cache table/array. Fill out the table with minimal values
-    cache_table = []   
-    cache_table.append(0)
+    cache_table = [0 for i in range(n+1)] 
+    cache_table[0] = 0
     
-    for j in range(1:n+1):
+    for j in range(1,n+1):
         max_val = -math.inf
         
         for i in range(j):
             max_val = max(max_val, prices[i] + cache_table[j-i-1] )
             
-        cache_table.append(max_val)
+        cache_table[j] = max_val
         
     return cache_table[n]
 
 {% endhighlight %} 
  
- Running time of this approach is &theta(n^2) due to its nesed for loop.
- 
+Running time of this approach is &theta(n^2) due to its nesed for loop.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Now, this solution only gives us the maximum price that we can get for slicing or not slicing the rod of length n.  We can modify our function to give us a full solution that consists of not only the maximum price, but also the position where the rod needs to be cut in order to get the maximum value/revenue for the rod of length n.
+
+{% highlight ruby %}
+import math
+
+# price = price array
+# n = length of a rod that is being analyzed
+def cut_rod_plus(prices,n):
+    # Cache table/array. Fill out the table with minimal values
+    cache_table = [0 for i in range(n+1)] 
+    # Array that saves indices of where to cut the rod for the optimal solution
+    slice_table = [0 for i in range(n+1)]
+    cache_table[0]=0
+    
+    for j in range(1,n+1):
+        max_value = -math.inf
+        
+        for i in range(j):
+            if max_value < prices[i] + cache_table[j-i-1]:
+                #Update the maximum value found
+                max_value = prices[i] + cache_table[j-i-1]
+                
+                #Record where the rod was sliced when max_val was found
+                slice_table[j] = i+1
+
+        cache_table[j] = max_value
+     
+    cache_table.pop(0)
+    slice_table.pop(0)
+    
+    return cache_table, slice_table
+    
+r,s = cut_rod_plus([1,5,8,9,10,17,17,20,24,30],5)
+
+print(r)
+print(s)
+    
+{% endhighlight %} 
+
+Let us see how this would work on an example. We are give the following lists:
+
+{% highlight ruby %}
+
+length *i* |  1   2   3   4   5   6   7   8   9   10
+-----------------------------------------------------------
+price *p*  |  1   5   8   9  10  17  17  20  24   30
+
+{% endhighlight %}
+
+After running our last function `cut_rod_plus(prices, n)`, we get results such as: 
+
+{% highlight ruby %}
+
+length *i* |  0   1   2   3   4   5   6   7   8   9   10
+-----------------------------------------------------------
+price *p*  |  0   1   5   8   9  10  17  17  20  24   30
+cache_table|  0   1   5   8  10  13  17  18  22  25   30
+slice_table|      1   2   3   2   2   6   1   2   3   10
+
+{% endhighlight %}
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Here we can see that if we had a rod of length 5, we would need to cut the rod at index 2, which leaves us with left side of the rod with length 2 and the right side of length 3. When prices of those 2 sides are combined, the value is 13 (greater than 10, or any other combination), which is the maximum value it could be gotten for selling the rod of length 5.
+
 <!-- https://sites.psu.edu/symbolcodes/codehtml/#math LINK FOR SYMBOLS IN EQUATIONS -->
 <!-- h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x -->
  
