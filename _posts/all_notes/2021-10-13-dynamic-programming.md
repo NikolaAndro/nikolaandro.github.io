@@ -56,8 +56,8 @@ Dynamic Programming can be represented as a 4-step method:
   4. Construct an optimal solution from computed information.
 
 Some of the problems that can be solved using the dynamic programming:
-  - Fibonacci's Recursion
-  - Rod Cutting
+  - [Fibonacci's Recursion](https://nikolaandro.github.io/fibonacci-sequence-dynamic-programming/)
+  - [Rod Cutting](https://nikolaandro.github.io/rod-cutting-dynamic-programming/)
   - Matrix-Chain Multiplication
   - Longest Common Subsequence
   - Coin Changing Problem
