@@ -40,103 +40,73 @@ def cut_rod(p,n):
  
  **How do we meet the necessary properties for dynamic programming?**
  
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  1. Optimal Structure - We can cut the rod in different spots and compare the prices after each cut. Then we can recursively call the same function on a piece obtained after the cut. 
  2. Overlapping Subproblems - In our recursive implementation, we can see that many subproblems are repeating/overlapping.
  
 
 # Top-Down Dynamic Programming Approach
 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+ As we know, this method is similar to the original recursive method, but it includes **memoization**, the process of saving/cashing/remembering already computed values.
  
+{% highlight ruby %}
+import math
+
+# p = price array
+# n = length of a rod that is being analyzed
+def cut_rod(p,n):
+    # Cache table/array. Fill out the table with minimal values
+    cache_table = [-math.inf for i in range(n)]   
+    return cut_rod_top_down(prices,n,cache_table)
+
+def cut_rod_top_down(prices, n, cache):
+    #If the value is already computed, just return it
+    if cache[n] >= 0:
+        return cache[n]
+    if n == 0:
+        max_val = 0
+    else:
+        max_val = -math.inf
+        for i in range (1,n):
+            max_val - max(max_value, prices[i] + cut_rod_top_down(prices, n-i, cache))
+    cache[n] = max_value
+    
+    return  max_val
+
+{% endhighlight %}
 
 # Bottom-up Dynamic Programming Approach
  
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ In the following piece of code, the for loop with *j* variable represents the length of the rod we plan on cutting. In order to get the best possible price, we must first iterate through all possible smaller sizes of the rod and calculate their maximum prices in order to get the best possible price for the rod of size *n*.
  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- Let cutRod(n) be the function that gives us the optimal price for the rod of the length n. The definition of the cutRod would be 
- 
- **cutRod(n) = max(price[i] + cutRod(n - i - 1)) for all *i* in {0,1,2,...n-1}**
- 
- where,
- 
- price[j] --> price of the piece from the left side of the cut
- 
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- Let us have an example of a table that gives lengths *i* inches of a rod and prices *p* related to each letgth of the rod.
- 
- {% highlight ruby %}
-length   | 1   2   3   4   5   6   7   8
------------------------------------------
-price    | 3   5   8   9   10  17  17  20
-
-{% endhighlight %}
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-If our optimal solution cuts the rod into *k* pieces, for some 0 < k < n+1, with distance from the left side end to the cut = *i*, then an optimal decomposition
-
-n = i<sub>1</sub> + i<sub>2</sub> + ... + i<sub>k</sub>
-
-of the rod into pieces of lengths i<sub>1</sub>, i<sub>2</sub>, ..., i<sub>k</sub> provides maximum corresponding revenue
-
-r<sub>n</sub> = p<sub>i<sub>1</sub></sub> + p<sub>i<sub>2</sub></sub> + ... + p<sub>i<sub>k</sub></sub> 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Now, we can take a look how this problem would evolve using cutRod(4):
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-![rod_cut_recursion representation](../../assets/posts_images/rod_cut_0.png)
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Figure 1 - Recursion Tree*
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-In this figure we can see that many subproblems are being recomputed again and again such as cR(1) and cR(2). Let's solve this using bottom-up dynamic programming approach.
-
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  In the for loop with *i* variable, we will find the maximum price for the rod of size *j* by cutting this piece of rod at index *i*. Compare the maximum_value found so far (starts from negative infiniti) with the price of the cut at next index. At the end of the loop, the maximum value will be compared with the given price for the whole rod without cutting since j-i will be equal to 0 in the last iteration of the loop which will result in prices[i] only (left side of the cut).
+  
 {% highlight ruby %}
+import math
 
-# A Dynamic Programming solution for Rod cutting problem
-INT_MIN = -32767
+# p = price array
+# n = length of a rod that is being analyzed
+def cut_rod(prices,n):
+    # Cache table/array. Fill out the table with minimal values
+    cache_table = []   
+    cache_table.append(0)
+    
+    for j in range(1:n+1):
+        max_val = -math.inf
+        
+        for i in range(j):
+            max_val = max(max_val, prices[i] + cache_table[j-i-1] )
+            
+        cache_table.append(max_val)
+        
+    return cache_table[n]
+
+{% endhighlight %} 
  
-# Returns the best obtainable price for a rod of length n and
-# price[] as prices of different pieces
-def cutRod(price, n):
-    val = [0 for x in range(n+1)]
-    val[0] = 0
+ Running time of this approach is &theta(n^2) due to its nesed for loop.
  
-    # Build the table val[] in bottom up manner and return
-    # the last entry from the table
-    for i in range(1, n+1):
-        max_val = INT_MIN
-        for j in range(i):
-             # price[j] --> price of the piece from the left side of the cut
-             # val[i-j-1] -->  price of the piece from the right side of the cut
-             max_val = max(max_val, price[j] + val[i-j-1])
-        val[i] = max_val
- 
-    return val[n]
- 
-# Driver program to test above functions
-arr = [1, 5, 8, 9, 10, 17, 17, 20]
-size = len(arr)
-print("Maximum Obtainable Value is " + str(cutRod(arr, size)))
-
-# Code obtained from GeeksForGeeks
-
-{% endhighlight %}
-
-We can see that we only used 2 for loops and no recursion. 
-
 <!-- https://sites.psu.edu/symbolcodes/codehtml/#math LINK FOR SYMBOLS IN EQUATIONS -->
 <!-- h<sub>&theta;</sub>(x) = &theta;<sub>o</sub> x + &theta;<sub>1</sub>x -->
  
