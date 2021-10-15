@@ -19,13 +19,15 @@ categories: post
  In this approach, we decompose the rod. The decomposition consists of the first piece of length i cut of the left hand end, and then the right-hand remainder of length *n - i*. Only the remainder from the right side can be decomposed further.  
  
 {% highlight ruby %}
+import math
+
 # p = price array
 # n = length of a rod that is being analyzed
 def cut_rod(p,n):
     # If the lenght of the given rod is 0, no revenue is possible.
     if n == 0:
         return 0
-    max_revenue = -Infinity
+    max_revenue = -math.inf
     for i in range (1,n+1):
         max_revenue = max(max_revenue, p[i] + cut_rod(p, n - i))
     return max_revenue
