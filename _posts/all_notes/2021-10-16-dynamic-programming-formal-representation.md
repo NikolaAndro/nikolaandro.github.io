@@ -20,6 +20,7 @@ x<sub>i</sub> - denotes the *decision* made at i<sup>th</sup> time for all i = 1
 
 In other words, for all i = 1,2,...,n-1, the state transitions are denoted as:
 
+- <img src="https://latex.codecogs.com/gif.latex?O_t=\text { Onset event at time bin } t " /> 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Nikola Andrić
