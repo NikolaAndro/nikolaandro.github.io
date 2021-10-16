@@ -11,6 +11,9 @@ s<sub>i</sub> - denotes the state of the system at $$i^{th}$$ time, for all i = 
 
 x<sub>i</sub> - denotes the *decision* made at i^th time for all i = 1, 2, ..., n.
 
+\[ x^n + y^n = z^n \]
+
+\begin{math}E=mc^2\end{math}
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
