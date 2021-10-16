@@ -22,5 +22,11 @@ In other words, for all i = 1,2,...,n-1, the state transitions are denoted as:
 
 - <img src="https://latex.codecogs.com/gif.latex?O_t=\text { Onset event at time bin } t " /> 
 
+```math
+SE = \frac{\sigma}{\sqrt{n}}
+```
+
+asdads This math is inline $`a^2+b^2=c^2`$.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Nikola Andrić
