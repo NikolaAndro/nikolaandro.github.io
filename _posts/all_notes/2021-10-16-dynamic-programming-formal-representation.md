@@ -28,5 +28,7 @@ SE = \frac{\sigma}{\sqrt{n}}
 
 asdads This math is inline $`a^2+b^2=c^2`$.
 
+![ith](https://latex.codecogs.com/gif.latex?i%5E%7Bth%7D)
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Nikola Andrić
