@@ -53,11 +53,35 @@ print('\n\nMaximum value this knapsack is ',knapSack(W, weight, val, n),'.')
   
 {% endhighlight %}
  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Instead of creating a 2d array for the table as if this problem was done by hand, we are creating final_row array that will be updated and at some point look exactly like each one of the rows when the table is constructed by hand. 
  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  We approach this problem by first considering the first element and its weight. In the code above, the 1<sup>st</sup> element has the weight of 2. Hence, we will start filling the table from the back of the row/array until we meet the index 2. 
  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  The way we fill this table is that we compare the `current value` in the row with new possible value, which is a combination of the element i that we are looking at + another element whose weight when added up to the weight of the element i, satisfies the capacity propery => weight of element i + weight of some other element <= W (capacity).
+ 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ If we take a look at final first row of the table done by hand, we can see that the row looks like this:
+ 
+ %hightlight ruby %
+ [0,0,4,4,4,4,4,4,4,4]
+ %endhighlight%
+ 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ We filled this row by comparing the current value in the row with new possible value until we hit index 2. They are all 4 because in the bag that has weight capacity *i* (which is 2 in this case), the best result for such capacity will be at index 2. 
+ 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Another example is the last row where we again start from the back and we have the following elements to compare:
+ 
+ current value in this index/capacity: 17
+ 
+ new possible value at this index/capacity => make a combination of the weight of the element we are looking at (in this case element value is 5 and weiht is 3) with another element (w - weight of this element (3) => 6). We have already computed the optimal vaue for the capacity 6 and saved it in our final array. Hence, we use it in this combination. 5 + 14 = 19
+ 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ We save the greater value in the table and move on down the array until we meet the given weight index (in this case of the last row that index is 3).
+ 
  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
