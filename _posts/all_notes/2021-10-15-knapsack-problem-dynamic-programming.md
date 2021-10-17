@@ -6,6 +6,7 @@ categories: post
 ---
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TO DO: explain filling the table and explain how code works
 
 # Problem:
 
