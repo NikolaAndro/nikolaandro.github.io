@@ -65,9 +65,9 @@ print('\n\nMaximum value this knapsack is ',knapSack(W, weight, val, n),'.')
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  If we take a look at final first row of the table done by hand, we can see that the row looks like this:
  
- %hightlight ruby %
+ {% highlight ruby %}
  [0,0,4,4,4,4,4,4,4,4]
- %endhighlight%
+ {%endhighlight%}
  
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  We filled this row by comparing the current value in the row with new possible value until we hit index 2. They are all 4 because in the bag that has weight capacity *i* (which is 2 in this case), the best result for such capacity will be at index 2. Those are the optimal values for capacity i in that moment.
