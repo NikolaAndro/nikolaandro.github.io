@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "0/1 Knapsack Problem - Dynamic Programming"
-date:   2021-10-15 09:29:20 +0700
+date:   2021-10-17 09:29:20 +0700
 categories: post
 ---
 
