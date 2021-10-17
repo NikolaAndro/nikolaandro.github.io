@@ -61,7 +61,7 @@ Some of the problems that can be solved using the dynamic programming:
   - Matrix-Chain Multiplication
   - Longest Common Subsequence
   - Coin Changing Problem
-  - Knapsack Problem
+  - [Knapsack Problem](https://nikolaandro.github.io/knapsack-problem-dynamic-programming/)
   - Graph Problems
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
