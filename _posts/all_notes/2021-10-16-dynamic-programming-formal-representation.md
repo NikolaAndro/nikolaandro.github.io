@@ -4,8 +4,6 @@ title:  "Formal Description of Dynamic Programming (DP)"
 date:   2021-10-16 09:29:20 +0700
 categories: post
 ---
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-\usepackage{mathtools}
 
 # Formal Description​
 
@@ -22,11 +20,6 @@ x<sub>i</sub> - denotes the *decision* made at i<sup>th</sup> time for all i = 1
 In other words, for all i = 1,2,...,n-1, the state transitions are denoted as:
 
 
-\begin{equation}
-  x = a_0 + \cfrac{1}{a_1 
-          + \cfrac{1}{a_2 
-          + \cfrac{1}{a_3 + \cfrac{1}{a_4} } } }
-\end{equation}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Nikola Andrić
