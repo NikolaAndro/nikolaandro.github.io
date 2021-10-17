@@ -36,7 +36,12 @@ print ("Length of LCS is ", lcs(X , Y, len(X), len(Y)))
 
 {%endhighlight%}
 
- We can solve this using a bottom-up dynamic programming approach as follows:
+ In the following image of a partial tree, we can see taht there are places where coputation was repeated. 
+ 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![printing representation](../../assets/posts_images/LCS_1.png)
+
+ We can solve this using a bottom-up dynamic programming approach, which avoids redundant computation, as follows:
 
 {%highlight ruby%}
 import numpy as np
@@ -105,6 +110,11 @@ print("The final length of LCS is:", lcs(X,Y))
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Once this code has been executed, you will be able to see the table created and follow the printing part pf the function and recognize the pattern used to print the LCS.
+ 
+ The following image was taken from `Wiki` and represents an example how printing path would look like:
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![printing representation](../../assets/posts_images/LCS_0.png)
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
