@@ -19,6 +19,8 @@ x<sub>i</sub> - denotes the *decision* made at i<sup>th</sup> time for all i = 1
 
 In other words, for all i = 1,2,...,n-1, the state transitions are denoted as:
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![formal representation](../../assets/posts_images/formal_dp_1.png)
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
