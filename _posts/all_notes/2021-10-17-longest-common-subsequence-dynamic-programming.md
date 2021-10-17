@@ -61,7 +61,7 @@ def lcs(X , Y):
             else:
                 L[i][j] = max(L[i-1][j] , L[i][j-1])
                 
-    print(print(np.matrix(L)))
+    print(np.matrix(L))
     
     # L[m][n] contains the length of LCS of X[0..n-1] & Y[0..m-1]
     
@@ -103,6 +103,8 @@ print("The final length of LCS is:", lcs(X,Y))
 
 {%endhighlight%}
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Once this code has been executed, you will be able to see the table created and follow the printing part pf the function and recognize the pattern used to print the LCS.
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
