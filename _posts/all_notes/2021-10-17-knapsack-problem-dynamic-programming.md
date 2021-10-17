@@ -60,7 +60,7 @@ print('\n\nMaximum value this knapsack is ',knapSack(W, weight, val, n),'.')
  We approach this problem by first considering the first element and its weight. In the code above, the 1<sup>st</sup> element has the weight of 2. Hence, we will start filling the table from the back of the row/array until we meet the index 2. 
  
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- The way we fill this table is that we compare the `current value` in the row with new possible value, which is a combination of the element i that we are looking at + another element whose weight when added up to the weight of the element i, satisfies the capacity propery => weight of element i + weight of some other element <= W (capacity).
+ The way we fill this table is that we compare the `current value` in the row with `new possible value`, which is a combination of the element i that we are looking at + another element whose weight when added up to the weight of the element i, satisfies the capacity propery => weight of element i + weight of some other element <= W (capacity).
  
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  If we take a look at final first row of the table done by hand, we can see that the row looks like this:
@@ -70,7 +70,7 @@ print('\n\nMaximum value this knapsack is ',knapSack(W, weight, val, n),'.')
  %endhighlight%
  
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- We filled this row by comparing the current value in the row with new possible value until we hit index 2. They are all 4 because in the bag that has weight capacity *i* (which is 2 in this case), the best result for such capacity will be at index 2. 
+ We filled this row by comparing the current value in the row with new possible value until we hit index 2. They are all 4 because in the bag that has weight capacity *i* (which is 2 in this case), the best result for such capacity will be at index 2. Those are the optimal values for capacity i in that moment.
  
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Another example is the last row where we again start from the back and we have the following elements to compare:
