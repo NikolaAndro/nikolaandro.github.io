@@ -4,7 +4,7 @@ title:  "Longest Increasing Subsequence (LIS) - Dynamic Programming"
 date:   2021-10-17 09:29:20 +0700
 categories: post
 ---
- **Pre-req: [longest common subsequence (LCS)](https://nikolaandro.github.io/longest-common-subsequence-dynamic-programming/)**
+ **Pre-req: [Longest Common Subsequence (LCS)](https://nikolaandro.github.io/longest-common-subsequence-dynamic-programming/)**
  
 # Problem:
 
