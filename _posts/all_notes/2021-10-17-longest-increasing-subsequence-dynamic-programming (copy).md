@@ -77,7 +77,9 @@ print("Length of LIS is ", lis(arr))
 
 {%endhighlight%}
 
- From this code we can see that 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ From this code we can see the same process as in LCS, which is a great way to find longest common subsequence using dynamic programming.
+ 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
 
