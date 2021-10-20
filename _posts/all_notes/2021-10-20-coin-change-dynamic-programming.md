@@ -82,6 +82,37 @@ We move on onto the index 2, meaning the subproblem of amount 2.  Repeat the pro
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Figure 6 - final solution*
  
+# My Solution
+
+ {%highlight ruby%}
+ def coin_change(coins, amount):
+    # arbitrary values in the array as place holders
+    calc = [999 for i in range(amount+1)]
+    
+    # for value of 0, we need no coins
+    calc[0] = 0
+    
+    #iteration over every index in the calculations array
+    for i in range (1, amount +1):
+        #iteration over all teh coins we need to try
+        for j in coins:
+            # i represents the value of  the subproblem
+            # j represents the value of the coin we picked
+            # sub represents the value of the subproblem that is smaller than i which
+            # we have already solved previously
+            sub = i - j
+            if sub >= 0:
+                # + 1 because we made another choice for the coin 
+                # + choice[sub] - the minimum amount of coin picks for the smaller amount
+                # that is gotten once coin j is picked
+                calc[i] = min(calc[i], calc[sub] + 1)
+    print(calc)
+    return calc[amount]
+    
+my_coins = coin_change([1,2,5], 11)
+print("The minimum amount of coins from the given set of coins to reach the value 11 is:",my_coins)
+ {%endhighlight%}
+ 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
  
