@@ -34,6 +34,8 @@ categories: post
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  To see that the greedy approach is not working on  0-1 knapsack problem , we can show that if we take the most valuable item first, and keep filling the bag, we may be left over with a certain capability of the bag (ex. 20 more lbs until reaching full capacity) that does not allow us to select any other item becuase all other items weigh more than 20lbs.
  
+ Application of greedy algorithms can be seen in the [*activity selection problem*](https://nikolaandro.github.io/activity-selection-problem/).
+ 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
  
