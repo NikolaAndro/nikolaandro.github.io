@@ -5,7 +5,7 @@ date:   2021-10-20 09:29:20 +0700
 categories: post
 ---
  
-# Problem:
+ # Problem:
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Given a certain amount of coins that associated values to them (ex. coins=[1,2,5]), determine the **minimum amount of coins** that we need to reach the fiven **amount** (ex. amount = 11).
@@ -16,7 +16,7 @@ categories: post
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  This problem can be solved using recursion, top-down DP, or bottom-up DP. We will go over top-down and bottom-up DP approaches.
  
- ### Top-Down DP Approach
+### Top-Down DP Approach
  
  {%highlight ruby%}
  
@@ -61,7 +61,7 @@ categories: post
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Figure 3 - subproblem 1*
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-We move on onto the index 2, meaning the subproblem of amount 2.  Repeat the process. Pick coint 1 => 2 - 1 = 1. Our new amount is 1. We have already computed the best amount of coins to reach the value of 1, which is 1. Since this value is 1 and we picked the coin 1 again, that is 1 + 1 = 2 coins picked to make the value of 2. The final test in the array = 8min(1+1, 12) = 2. Now, we pick coin with value 2 => 2 - 2 = 0. We, know that for the amount of 0, we need no coins, so we only picked one coin this time 0 + 1 = 1. Check with the previous best amount of coins for the value of 2 and choose the smaller one => min(0+1, 2) = 1. Hence, our new minimum amount of coins to reach teh value of w is 1 (we just picked the coin with value 2).
+We move on onto the index 2, meaning the subproblem of amount 2.  Repeat the process. Pick coint 1 => 2 - 1 = 1. Our new amount is 1. We have already computed the best amount of coins to reach the value of 1, which is 1. Since this value is 1 and we picked the coin 1 again, that is 1 + 1 = 2 coins picked to make the value of 2. The final test in the array = 8min(1+1, 12) = 2. Now, we pick coin with value 2 => 2 - 2 = 0. We, know that for the amount of 0, we need no coins, so we only picked one coin this time 0 + 1 = 1. Check with the previous best amount of coins for the value of 2 and choose the smaller one => min(0+1, 2) = 1. Hence, our new minimum amount of coins to reach teh value of w is 1 (we just picked the coin with value 2).  Now we try coin 5 => 2 - 5 = -3. Not considering this one. 
 
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 ![bottom-up-approach](../../assets/posts_images/coins_4.png)
