@@ -53,6 +53,17 @@ categories: post
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Figure 2 - bottom-up approach*
  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ The process of thinking is as follows: For index 1 -->  we will try each coin from our list of possible coins, which will lead us to a new amount, *old_amount - coni_value = new_amount*. Try coin 1 => 1 - 1 = 0. Our subproblem turned to be the amount of 0, for which we know the answer = 0. Now, we know that we picked coin 1, which means that we made a decision to add that coin to the final amount of coins to reach amount 1. For amount of 0, we need 0 coins, we add the 1 coin of value 1 we chose, and our final amount of coins  we need to reach the amount would be the *minimum between previous value at index1 and our new solution => min(0+1, 12) = 1*. Hence, our best solution for value 1 so far is to pick only 1 coin. Try coin 2 => 1 - 2 = -1 => we do not take this in consideration since we get negative amount for our subproblem. Try coin 5 => 1 - 5 = -4 => we do not take this one in consideration eaither. 
+ 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![bottom-up-approach](../../assets/posts_images/coins_3.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Figure 3 - bottom-up approach*
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+We move on onto the index 2, meaning the subproblem of amount 2.  Repeat the process. Pick coint 1 => 2 - 1 = 1. Our new amount is 1. We have already computed the best amount of coins to reach the value of 1, which is 1. Since this value is 1 and we picked the coin 1 again, that is 1 + 1 = 2 coins picked to make the value of 2. The final test in the array = 8min(1+1, 12) = 2. Now, we pick coin with value 2.  
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
  
  
