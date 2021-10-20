@@ -60,7 +60,7 @@ Some of the problems that can be solved using the dynamic programming:
   - [Rod Cutting](https://nikolaandro.github.io/rod-cutting-dynamic-programming/)
   - Matrix-Chain Multiplication
   - [Longest Common Subsequence](https://nikolaandro.github.io/longest-common-subsequence-dynamic-programming/)
-  - Coin Changing Problem
+  - [Coin Changing Problem](https://nikolaandro.github.io/coin-change-dynamic-programming/)
   - [Knapsack Problem](https://nikolaandro.github.io/knapsack-problem-dynamic-programming/)
   - Graph Problems
 
