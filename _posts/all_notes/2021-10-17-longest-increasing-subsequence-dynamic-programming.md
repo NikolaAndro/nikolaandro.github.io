@@ -80,6 +80,12 @@ print("Length of LIS is ", lis(arr))
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  From this code we can see the same process as in LCS, which is a great way to find longest common subsequence using dynamic programming.
  
+ *Variations of this problem are:*
+     
+     - Extract the LIS as a list
+     - Length of a Longest Decreasing Sequence (LDS)
+     - Extract the LDS
+     
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
 
