@@ -113,6 +113,8 @@ my_coins = coin_change([1,2,5], 11)
 print("The minimum amount of coins from the given set of coins to reach the value 11 is:",my_coins)
  {%endhighlight%}
  
+ *Variation of this problem is when coins can be picked only once!*
+ 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
  
