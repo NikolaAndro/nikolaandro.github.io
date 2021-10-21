@@ -42,7 +42,7 @@ categories: post
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  This is much less than our original message. This was done using *fixed-size codes*, but we can do even better with *variable-sized codes*.
  
-# Variable Sized codes
+# Variable Sized codes (Huffman Coding)
 
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
