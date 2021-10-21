@@ -86,6 +86,36 @@ categories: post
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Figure  - Finished min-heap*
 
+ **Steps to print codes from Huffman Tree:**
+ 
+ Traverse the tree formed starting from the root. Maintain a temporary array. While moving to the left child, write 0 to the array. While moving to the right child, write 1 to the array. Print the array when a leaf node is encountered.
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![min-heap](../../assets/posts_images/huffman_4.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Figure  - 0/1 min-heap*
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ From this min-heap we start from the root and follow the path to our characters. For instance, for the character 'A' the path contains 0-0-1, so that is the code for it. Our final table would look as follows:
+
+   <div class="overflow-table" markdown="block">
+
+| Character  |  count  |   code  |  message total bits (count * bits) | 
+| :----------|  :----  |   :---  |  :-------------------------------  |
+|     `A`    |   `3`   |   `001` |              `3 * 3 = 9`           |
+|     `B`    |   `5`   |   `10`  |              `5 * 2 = 10`          |
+|     `C`    |   `6`   |   `11`  |              `6 * 2 = 12`          |
+|     `D`    |   `4`   |   `01`  |              `4 * 2 = 8`           |
+|     `E`    |   `2`   |   `000` |              `2 * 3 = 6`           |
+|            |         |         |           `Total = 44 bits`        |
+ 
+</div>
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Those are our new codes and we can notices that not all of them are 3 bit codes. Some of them are 2 bit codes. The size of the whole message is now 44 bits, the size of the table is => 5 characters x 8 bits = 40 bits + 12bits for codes = 52 bits total. The **total amount of memory for the compressed message with the table is 44 + 52 bits = 96 bits**! This is even better than fixed sized codes!
+ 
+ 
+ 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
 
