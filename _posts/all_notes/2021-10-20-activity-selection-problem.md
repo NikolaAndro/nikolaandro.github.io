@@ -79,6 +79,8 @@ print(selected)
 
 {%endhighlight%}
 
+ *Variation of this problem is when activities are weighted.*
+ 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
 
