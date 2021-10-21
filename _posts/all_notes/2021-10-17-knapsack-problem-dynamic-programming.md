@@ -82,6 +82,7 @@ print('\n\nMaximum value this knapsack is ',knapSack(W, weight, val, n),'.')
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  We save the greater value in the table and move on down the array until we meet the given weight index (in this case of the last row that index is 3).
  
+ *Variation of this problem would be fractional knapsack prblem!*
  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
