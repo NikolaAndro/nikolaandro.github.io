@@ -5,7 +5,7 @@ date:   2021-10-20 09:29:20 +0700
 categories: post
 ---
  
- # Problem:
+# Problem:
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Given a certain amount of coins that associated values to them (ex. coins=[1,2,5]), determine the **minimum amount of coins** that we need to reach the fiven **amount** (ex. amount = 11).
