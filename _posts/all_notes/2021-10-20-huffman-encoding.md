@@ -111,7 +111,7 @@ categories: post
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Those are our new codes and we can notices that not all of them are 3 bit codes. Some of them are 2 bit codes. The size of the whole message is now 44 bits, the size of the table is => 5 characters x 8 bits = 40 bits + 12bits for codes = 52 bits total. The **total amount of memory for the compressed message with the table is 44 + 52 bits = 96 bits**! This is even better than fixed sized codes!
  
- 
+ *Variation of this problem is to decode the given sequence of bits.*
  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
