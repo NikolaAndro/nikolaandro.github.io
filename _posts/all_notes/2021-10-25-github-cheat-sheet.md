@@ -17,7 +17,7 @@ cd          # change directory
 
 ..          # up one directory
 
--           # previous working directory
+\- # previous working directory
 
 help        # get help
 
