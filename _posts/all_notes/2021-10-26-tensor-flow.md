@@ -113,3 +113,53 @@ Let's see how are tensors created:
   c1 = a0 * b
 
 {%endhighlight%}
+
+# Basic Operations
+
+TensorFlow has a model of computation that revolves around the use of graphs. A TensorFlow graph contains edges and nodes, where the edges are tensors and the nodes are operations.
+
+In the figure 2, we can see the graph which was drawn using TensorFlow, the const operations define 2 by 2 constant tensors. Two tensors are summed using the add operation. Another two tensors are then summed using the add operation. Finally, the resulting matrices are multiplied together with the matmul operation.
+
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![bread](../../assets/posts_images/tensor_1.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Figure 2 - TensorFlow Operations*
+
+### Addition Operator ####
+
+{% highlight ruby %}
+
+#importing add and constants
+from tensorflow import constant, add
+
+# define 0-D, 1-D, and 2-D tensors
+
+A0 = constant([1])
+B0 = constant([2])
+
+A1 = constant([1,2])
+B1 = constant([3,4])
+
+A2 = constant([1,2], [3,4])
+B2 = constant([5,6], [7,8])
+
+# performing additionwith add()
+C0 = add(A0,B0)
+C1 = add(A1,B1)
+C2 = add(A2,B2)
+
+{% endhighlight %}
+
+The add operation performs element-wise addition with two tensors. **Each pair of tensors added must have the same shape**. Element-wise addition of the scalars 1 and 2 yields the scalar 3. Element-wise addition of the vectors 1,2 and 3,4 yields the vector 4,6. Element-wise addition of the matrices 1,2,3,4 and 5,6,7,8 yields the matrix 6,8,10,12. Furthermore, the add operator is overloaded, which means that we can also perform addition using the plus symbol.
+
+\[
+\Gamma = \begin{bmatrix}
+\gamma_{1 1} & \gamma_{1 0} \\
+\gamma_{0 1} & \gamma_{0 0} 
+\end{bmatrix},
+\]   
+
+
