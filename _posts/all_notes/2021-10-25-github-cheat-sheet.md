@@ -145,7 +145,6 @@ git commit -a
 
 ### Exporting Patches
                           
-<make changes>
   
 git commit -a -m "commit message"
   
