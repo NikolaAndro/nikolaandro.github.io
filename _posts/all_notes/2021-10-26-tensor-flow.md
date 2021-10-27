@@ -4,6 +4,7 @@ title:  "TensorFlow - Python"
 date:   2021-10-26 09:29:20 +0700
 categories: post
 ---
+\usepackage{amsmath}
 
  TensorFlow is an open-source library for graph-based numerical computation developed by Google Brain Team. We can use TenserFlow to perform:\
  
@@ -143,23 +144,61 @@ B0 = constant([2])
 A1 = constant([1,2])
 B1 = constant([3,4])
 
-A2 = constant([1,2], [3,4])
-B2 = constant([5,6], [7,8])
+A2 = constant([[1,2], [3,4]])
+B2 = constant([[5,6], [7,8]])
 
 # performing additionwith add()
 C0 = add(A0,B0)
 C1 = add(A1,B1)
-C2 = add(A2,B2)
+C2 = A2 + B2
 
-{% endhighlight %}
+{% endhighlight %}\begin{bmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{bmatrix}
 
 The add operation performs element-wise addition with two tensors. **Each pair of tensors added must have the same shape**. Element-wise addition of the scalars 1 and 2 yields the scalar 3. Element-wise addition of the vectors 1,2 and 3,4 yields the vector 4,6. Element-wise addition of the matrices 1,2,3,4 and 5,6,7,8 yields the matrix 6,8,10,12. Furthermore, the add operator is overloaded, which means that we can also perform addition using the plus symbol.
 
-\[
-\Gamma = \begin{bmatrix}
-\gamma_{1 1} & \gamma_{1 0} \\
-\gamma_{0 1} & \gamma_{0 0} 
-\end{bmatrix},
-\]   
+### Element-wise and Matrix Multiplication ####
 
-...
+For element-wise multiplication, which is performed with the **multiply()** operation, the ***tensors involved must have the same shape***. For instance, you may want to multiply the vector 1,2,3 by 3,4,5 or 1,2 by 3,4. For matrix multiplication, you use the **matmul()** operator. Note that performing matmul(A,B) requires that the ***number of columns of A equal the number of rows of B.***
+
+{%highlight ruby%}
+
+from tensorflow import ones, multiply, matmul
+
+A0 = ones(1)
+A31 = ones([3,1])
+A34 = ones([3,4])
+A43 = ones([4,3])
+
+{%endhighlight%}
+
+What operations can be performed using these tensors of ones? We can perform element-wise multiplication of any element by itself, such as A0 by A0, A31 by A31, or A34 by A34. We can also perform matrix multiplication of A43 by A34, but not A43 by A43..
+
+### Summation over tensor dimensions ###
+
+Thsi operation is performed using the **reduce_sum()** operator.  This can be used to sum over all dimensions of a tensor or just over one dimension of a tensor!
+
+reduce_sum(A) --> sums over all dimensions of A
+
+reduce_sum(A, i) --> sumes over dimension i of the tensor A
+
+{%highlight ruby%}
+
+from tensorflow import ones, reduce_sum
+
+A = ones([2,3,4])
+
+#sum over all dimensions --> results in 24 since the tensor contains 24 elements all of which are 1
+B = reduce_sum(A)
+print(B.numpy())
+
+# sum over dimenssions 0,1 and 2
+B0 = reduce_sum(A,0)
+print(B0.numpy())
+
+{%endhighlight%}
+
+If we sum over dimension 0, we get a 3 by 4 matrix of 2s. If we sum over 1, we get a 2 by 4 matrix of 3s. And if we sum over 2, we get a 2 by 3 matrix of 4s. In each case, we reduce the size of the tensor by summing over one of its dimensions.
+
