@@ -244,3 +244,10 @@ sudo ln -s /Applications/Sublime\ Text\ 2.app/Contents/SharedSupport/bin/subl /u
 ## Tree in the terminal
   
 git log --graph
+
+  
+## Merging branches
+  
+Go to the branch that you want to merge into and then merge a desiring branch using the following command:
+  
+git merge merging_branch_name
