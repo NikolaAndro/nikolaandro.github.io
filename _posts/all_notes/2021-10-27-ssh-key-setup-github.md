@@ -7,7 +7,7 @@ categories: post
 
 1. Enter the following command with your GitHub email:
 
-  ssh-keygen -t rsa -b 4096 -C "joe@example.com"
+       ssh-keygen -t rsa -b 4096 -C "joe@example.com"
   
 2. Press Enter to accept the default file location (home/username/.ssh/id_rsa).
 
@@ -15,7 +15,7 @@ categories: post
 
 4. Copy the public key.
 
-  cat .ssh/id_rsa.pub
+       cat .ssh/id_rsa.pub
   
 5. In GitHub settings go to SSH keys, generate a new key. 
 
