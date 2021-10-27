@@ -90,7 +90,7 @@ git branch                          # show list of all branches (* is active)
   
 git checkout -b linux-work          # create a new branch named "linux-work"
   
-<make changes>
+make changes
   
 git commit -a
   
