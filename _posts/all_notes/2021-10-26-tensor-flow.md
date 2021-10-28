@@ -213,6 +213,103 @@ print(B0.numpy())
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 If we sum over dimension 0, we get a 3 by 4 matrix of 2s. If we sum over 1, we get a 2 by 4 matrix of 3s. And if we sum over 2, we get a 2 by 3 matrix of 4s. In each case, we reduce the size of the tensor by summing over one of its dimensions.
 
+# Advaned Operations
+
+<div class="overflow-table" markdown="block">
+
+|    Operation    |                                   Use                                |  
+| :---------------|  :-----------------------------------------------------------------  |  
+| gradient()      | Computes the slope of a function at a point                          |  
+| reshape()       | Reshapes a tensor (e.g. 10x10 to 100x1)                              |  
+| random()        | Populates tensor with entries drawn from a probability distribution  |  
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+In many machine learning problems, you will need to find an optimum--that is, a minimum or maximum. You may, for instance, want to find the model parameters that minimize the loss function or maximize the objective function. Fortunately, we can do this by using the gradient operation, which tells us the slope of a function at a point. We start this process by passing points to the gradient operation until we find one where the gradient is zero. Next, we check if the gradient is increasing or decreasing at that point. If it is increasing, we have minimum. Otherwise, we have a maximum.
+
+
+{%highlight ruby%}
+import tensorflow as tf
+
+#define x
+x = tf.Variable(-1.0)
+
+#Define y within instance of GradiantTape
+with tf.GradientTape() as tape:
+     tape.watch(x)
+     y = tf.multiply(x,x)
+     
+ # evaluate the gradient of y at x = -1
+ g = tape.gradient(y,x)
+ 
+ print(g.numpy())
+
+{%endhighlight%}
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Note that we apply the watch method to an instance of gradient tape and then pass the variable x. This will allow us to compute the rate of change of y with respect to x. Next, we compute the gradient of y with respect to x using the tape instance of gradient tape. Note that y is the first argument and x is the second. As written, the operation computes the slope of y at a point. Running the code and printing, we find that the slope is -2 at x equals -1, which means that y is initially decreasing in x.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+We'll next consider an operation that is particularly useful for image classification problems: reshaping. The grayscale image shown has a natural representation as a matrix with values between 0 and 255. While some algorithms exploit this shape, others require you to reshape matrices into vectors before using them as inputs, as shown in the diagram.
+
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![images](../../assets/posts_images/tensor_2.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Figure 3 - Images with Tensors*
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Now that you've seen how images can be represented as tensors, let's generate some input images and reshape them. We will create a random grayscale image by drawing numbers from the set of integers between 0 and 255. We will use these to populate a 2 by 2 matrix. We can then reshape this into a 4 by 1 vector, as shown in the diagram.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![images](../../assets/posts_images/tensor_3.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Figure 4 - Gray Image Manipulation*
+
+{%highlight ruby%}
+import tensorflow as tf
+
+# Generate grayscale image
+gray = tf.random.uniform([2,2], maxval = 255, dtype= 'int32')
+print(gray.numpy())
+
+#Reshape grayscale image
+gray = tf.reshape(gray, [2*2 , 1])
+print(gray.numpy())
+
+{%endhighlight%}
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+For color images, we will generate 3 such matrices to form a 2 by 2 by 3 tensor. We could then reshape the image into a 4 by 3 tensor, as shown in the diagram.
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![images](../../assets/posts_images/tensor_4.png)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Figure 4 - Colored Image Manipulation*
+
+{%highlight ruby%}
+import tensorflow as tf
+
+# Generate grayscale image
+color = tf.random.uniform([2,2,3], maxval = 255, dtype= 'int32')
+print(color.numpy())
+
+#Reshape grayscale image
+color = tf.reshape(color, [2*2 , 3])
+print(color.numpy())
+
+{%endhighlight%}
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Nikola Andric
 
