@@ -16,8 +16,8 @@ There are 3 different approaches to amortized analysis:
       
       2. Accounting Method - Assign cost to each operation, 
       overcharging some operations and undercharging some 
-      operations. The idea is that early overcharged operations 
-      prepay for later undercharged operations. 
+      operations. The idea is that early overcharged 
+      operations prepay for later undercharged operations. 
       
       3. Potential Method - A potential energy is associated to 
       the data structure,rather than individual credit to operations. 
