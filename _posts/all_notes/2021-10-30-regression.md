@@ -27,7 +27,6 @@ the 1-million-dollar Netflix prize. Predicting the length of stay for patients i
 **A good rule of thumb is that any how much? or how many? problem should suggest regression**, such as:
 
 - How many hours will this surgery take?
-
 - How much rainfall will this town have in the next six hours?
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
