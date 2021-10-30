@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Neural Networks"
+title:  "Deep Learning"
 date:   2021-10-30 09:29:20 +0700
 categories: post
 ---
