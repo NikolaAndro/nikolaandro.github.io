@@ -47,8 +47,8 @@ to the learned model, using its outputs as predictions of the corresponding labe
 Types of Supervised Learning:
 
    - [Regression](https://nikolaandro.github.io/regression/)
-   - Classification
-   - Tagging
-   - Search
-   - Recommender Systems
-   - Sequence Learning
+   - [Classification](https://nikolaandro.github.io/classification/)
+   - [Tagging]()
+   - [Search]()
+   - [Recommender Systems]()
+   - [Sequence Learning]()
