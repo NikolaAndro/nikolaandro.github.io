@@ -48,10 +48,10 @@ Types of Supervised Learning:
 
    - [Regression](https://nikolaandro.github.io/regression/)
    - [Classification](https://nikolaandro.github.io/classification/)
-   - [Tagging]()
-   - [Search]()
-   - [Recommender Systems]()
-   - [Sequence Learning]()
+   - [Tagging](https://nikolaandro.github.io/tagging/)
+   - Search
+   - Recommender Systems
+   - Sequence Learning
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
