@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Deep Learning"
+title:  "Machine Learning - ML"
 date:   2021-10-30 09:29:20 +0700
 categories: post
 ---
