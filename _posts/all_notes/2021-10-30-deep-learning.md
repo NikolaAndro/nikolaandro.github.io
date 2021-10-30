@@ -7,10 +7,10 @@ categories: post
 
 # Key Components
 
-    1. The data that we can learn from.
-    2. A model of how to transform the data.
-    3. An objective function that quantifies how well (or badly) the model is doing.
-    4. An algorithm to adjust the model’s parameters to optimize the objective function.
+   1. The data that we can learn from.
+   2. A model of how to transform the data.
+   3. An objective function that quantifies how well (or badly) the model is doing.
+   4. An algorithm to adjust the model’s parameters to optimize the objective function.
 
 # Data
 
