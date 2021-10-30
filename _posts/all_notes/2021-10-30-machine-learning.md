@@ -83,9 +83,9 @@ categories: post
     - Recommender Systems
     - Sequence Learning
    
- - Unsupervised and Self-Supervised Learning
+ - [Unsupervised and Self-Supervised Learning](https://nikolaandro.github.io/unsupervised-and-self-supervised/)
  - Interacting with an Environment
- - Reinforcement Learning
+ - [Reinforcement Learning](https://nikolaandro.github.io/reinforcement-learning/)
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
