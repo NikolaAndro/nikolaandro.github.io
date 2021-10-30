@@ -24,9 +24,7 @@ in industry. Partly, that is because many important tasks can be described crisp
 unknown given a particular set of available data:
 
     - Predict cancer vs. not cancer, given a computer tomography image.
-
     - Predict the correct translation in French, given a sentence in English.
-
     - Predict the price of a stock next month based on this month’s financial reporting data.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -46,3 +44,11 @@ to the learned model, using its outputs as predictions of the corresponding labe
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Figure 2 - Supervised Learning*
 
+Types of Supervised Learning:
+
+    - Regression
+    - Classification
+    - Tagging
+    - Search
+    - Recommender Systems
+    - Sequence Learning
