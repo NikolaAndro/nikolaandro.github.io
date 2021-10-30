@@ -73,4 +73,17 @@ categories: post
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Once we have got some data source and representation, a model, and a well-defined objective function, we need an algorithm capable of searching for the best possible parameters for minimizing the loss function. Popular optimization algorithms for deep learning are based on an approach called gradient descent. In short, at each step, this method checks to see, for each parameter, which way the training set loss would move if you perturbed that parameter just a small amount. It then updates the parameter in the direction that may reduce the loss.
 
+# Types of Machine Learning
+
+ - Supervised Learning
+    - Regression
+    - Classification
+    - Tagging
+    - Search
+    - Recommender Systems
+    - Sequence Learning
+   
+ - Unsupervised and Self-Supervised Learning
+ - Interacting with an Environment
+ - Reinforcement Learning
 
