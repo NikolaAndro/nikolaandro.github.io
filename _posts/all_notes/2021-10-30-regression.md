@@ -5,6 +5,8 @@ date:   2021-10-30 09:29:20 +0700
 categories: post
 ---
 
+# How much? How many?
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 We might construct a table, where each row corresponds to a different house, and each column corresponds to some relevant attribute,
 such as the square footage of a house, the number of bedrooms, the number of bathrooms, and the number of minutes (walking) 
