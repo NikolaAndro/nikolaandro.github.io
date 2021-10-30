@@ -40,3 +40,8 @@ some reasonable assumptions, such as more hours worked costs more dollars. You m
 that the contractor then charges per hour. If these assumptions held true, then given these two data examples, you could already 
 identify the contractor’s pricing structure: 100 dollars per hour plus 50 dollars to show up at your house. If you followed that
 much then you already understand the high-level idea behind linear regression.
+
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Nikola Andrić
+ 
