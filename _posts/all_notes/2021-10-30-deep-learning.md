@@ -87,3 +87,5 @@ categories: post
  - Interacting with an Environment
  - Reinforcement Learning
 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Nikola Andrić
