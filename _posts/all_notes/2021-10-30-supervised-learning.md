@@ -52,3 +52,6 @@ Types of Supervised Learning:
    - [Search]()
    - [Recommender Systems]()
    - [Sequence Learning]()
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ Nikola Andrić
