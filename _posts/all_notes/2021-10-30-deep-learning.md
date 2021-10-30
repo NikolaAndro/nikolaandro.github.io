@@ -76,8 +76,8 @@ categories: post
 # Types of Machine Learning
 
  - [Supervised Learning](https://nikolaandro.github.io/supervised-learning/) 
-    - Regression
-    - Classification
+    - [Regression](https://nikolaandro.github.io/regression/)
+    - [Classification](https://nikolaandro.github.io/classification/)
     - Tagging
     - Search
     - Recommender Systems
