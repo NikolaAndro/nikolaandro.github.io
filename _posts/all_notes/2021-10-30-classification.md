@@ -8,6 +8,18 @@ categories: post
 # Which one is it?
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Classification can be performed on structured or unstructured data. Classification is a technique where we categorize data into a given number of classes. The main goal of a classification problem is to identify the category/class to which a new data will fall under.
+
+**Terminology**:
+
+- Classofier: An algorithm that maps the input data to a specific category.
+- Classification model: A classification model tries to draw some conclusion from the input values given for training. It will predict the class labels/categories for the new data.
+- Feature: A feature is an individual measurable property of a phenomenon being observed.
+- Binary Classification: Classification task with two possible outcomes. Eg: Gender classification (Male / Female).
+- Multi-class classification: Classification with more than two classes. In multi class classification each sample is assigned to one and only one target label. Eg: An animal can be cat or dog but not both at the same time.
+- Multi-labeled classification: Classification task where each sample is mapped to a set of target labels (more than one class). Eg: A news article can be about sports, a person, and location at the same time.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 For example, a bank wants to add check scanning to its mobile app. This would involve the customer snapping a 
 photo of a check with their smart phone’s camera and the app would need to be able to automatically understand 
 text seen in the image. Specifically, it would also need to understand handwritten text to be even more robust,
@@ -31,6 +43,16 @@ When we have more than two possible classes, we call the problem ***multiclass c
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Now, assume that you built a classifier and trained it to predict if a mushroom is poisonous based on a photograph. Say our poison-detection classifier outputs that the probability that mushroom you found contains a death cap is 0.2. In other words, the classifier is 80% sure that our mushroom is not a death cap. Still, you would have to be a fool to eat it. That is because the certain benefit of a delicious dinner is not worth a 20% risk of dying from it. In other words, the effect of the uncertain risk outweighs the benefit by far. Thus, we need to compute the expected risk that we incur as the loss function, i.e., we need to multiply the probability of the outcome with the benefit (or harm) associated with it. In this case, the loss incurred by eating the mushroom can be  0.2 × ∞ + 0.8 × 0 = ∞ , whereas the loss of discarding it is  0.2 × 0 + 0.8 × 1 = 0.8 . Our caution was justified: as any mycologist would tell us, the mushroom actually is a death cap.
+
+# Types of classification algorithms
+
+- Logistic Regression
+- Naive Bayes
+- Stochastic Gradient Descent
+- K-Nearest Neighbours
+- Decision Tree
+- Random Forest
+- Support Vector Machine
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Nikola Andric
