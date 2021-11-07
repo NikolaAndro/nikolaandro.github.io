@@ -15,7 +15,7 @@ The filter is named after ***Rudolf E. Kálmán*** (May 19, 1930 – July 2, 201
 a **recursive solution to the discrete-data linear filtering problem**.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Today the Kalman filter is used in Tracking Targets (Radar), location and navigation systems, control systems, computer graphics
+Its first use was on the Apollo missions to the moon, and since then it has been used in an enormous variety of domains. Today the Kalman filter is used in Tracking Targets (Radar), location and navigation systems, control systems, computer graphics
 and much more.
 
 # Why Kalman filters?
