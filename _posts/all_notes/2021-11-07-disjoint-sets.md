@@ -31,51 +31,51 @@ Existing sets:
 - S2 = {f,k}
 - S3 = {d,i,g}
 
-4. (b,g)
+4.(b,g)
 
 Existing sets:
 - S2 = {f,k}
 - S4 = {d,i,g,b}
 
-6. (a,h) 
+6.(a,h) 
 
 Existing sets:
 - S2 = {f,k}
 - S4 = {d,i,g,b}
 - S5 = {a,h}
 
-8. (i,j)
+7.(i,j)
 
 Existing sets:
 - S2 = {f,k}
 - S5 = {a,h}
 - S6 = {d,i,g,b,j}
 
-10. (d,k)
+8.(d,k)
 
 Existing sets:
 - S5 = {a,h}
 - S7 = {d,i,g,b,j,f,k}
 
-12. (b,j) since both elements are in the same set, this means that there is a cycle in the graph.
+9.(b,j) since both elements are in the same set, this means that there is a cycle in the graph.
 
 Existing sets:
 - S5 = {a,h}
 - S7 = {d,i,g,b,j,f,k}
 
-14. (d,f) since both elements are in the same set, this means that there is a cycle in the graph.
+10.(d,f) since both elements are in the same set, this means that there is a cycle in the graph.
 
 Existing sets:
 - S5 = {a,h}
 - S7 = {d,i,g,b,j,f,k}
 
-17. (g,j) since both elements are in the same set, this means that there is a cycle in the graph.
+11.(g,j) since both elements are in the same set, this means that there is a cycle in the graph.
 
 Existing sets:
 - S5 = {a,h}
 - S7 = {d,i,g,b,j,f,k}
 
-19. (a,e)
+12.(a,e)
 
 Existing sets:
 - S8 = {d,i,g,b,j,f,k,a,h,e}
@@ -104,6 +104,10 @@ Show the status of the datastructures using linked lists:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 ![data](../../assets/posts_images/disjoint_1.png)
+
+# Disjoint-set Forests
+
+In this case we use trees to represent sets. When making a set, we only have the root and its value. Every other object that is being adde to the set points to its parent. 
 
 Show the status of the datastructures using disjoint forests with union by size and path compression:
 
