@@ -38,7 +38,20 @@ E = {(1,2),(2,3),(3,4),...}
 
 # Prim's Algorithm
 
-
+Prim's algorithm starts from the root vertex grows until it spans accross all vertices of the graph. The prpcess of choosing to which vertex to connect is simple. It chooses the vertex that has contains the edge between itself and the root that has the smallest value. For instance, in the following graph on the right side of the following image, we will start from the vertex 1. It will connect to the vertex with the edge of weight 10. The next decision is between the edges that are connected to the current spanning tree and those are (1,2) = 28 and (6,5) = 25. We pick (6,5) due to its smaller weight. We keep this process until we select all vertices of the original graph.
  
-
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ ![data](../../assets/posts_images/prim_0.png)
+ 
+ Let us see how would spanning tree grow in the following exaple:
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ ![data](../../assets/posts_images/span_6.png)
+ 
+ Answer:
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ ![data](../../assets/posts_images/prim_1.png)
+ 
+# Kruskal's Algorithm
 
