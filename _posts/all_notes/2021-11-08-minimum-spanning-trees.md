@@ -55,3 +55,8 @@ Prim's algorithm starts from the root vertex grows until it spans accross all ve
  
 # Kruskal's Algorithm
 
+Kruskal's algorithm states that we should always select the minimum cost edge that does not form a cycle. Let us see how would minimum spanning tree of the above example grow using the Kruskal's algorithm.
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ ![data](../../assets/posts_images/kruskal_0.png)
+
