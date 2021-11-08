@@ -43,5 +43,15 @@ Prim's algorithm starts from the root vertex grows until it spans accross all ve
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
  ![data](../../assets/posts_images/prim_0.png)
  
+ Let us see how would spanning tree grow in the following exaple:
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ ![data](../../assets/posts_images/span_6.png)
+ 
+ Answer:
+ 
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+ ![data](../../assets/posts_images/prim_1.png)
+ 
 # Kruskal's Algorithm
 
