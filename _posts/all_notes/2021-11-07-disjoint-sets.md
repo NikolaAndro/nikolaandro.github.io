@@ -118,7 +118,7 @@ In this approach, Make_Set(x) crfeates a new tree with the root x. Find_Set(x) w
 
 **Union by rank** - in this approach for each node we assign a **rank** to each node. **Rank** represents the upper bound on the height of the tree. Finally, we make the root with smaller rank point to the root with the larger rank durin the Union(x,y) operation. 
 
-**Path Compression** - in this approach...
+**Path Compression** - this approach does not change any ranks, but rather changes to what node children point to. If there is a child of another child, the last child will point to the root. This process repeatch untill all nodes point to the root.
 
 Show the status of the datastructures using disjoint forests with union by size and path compression:
 
