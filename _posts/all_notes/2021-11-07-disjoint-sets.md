@@ -108,6 +108,11 @@ Show the status of the datastructures using linked lists:
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 ![data](../../assets/posts_images/disjoint_1.png)
 
+**Time Complexity of Linked-list disjoint sets:**
+
+Since we performed *m* operations on *n* objects, we can assume that this requires $O(n^2)$ time. We execute Make_Set n times followed by n-1 union operations. Hence the total number of objects updated my the Union function is \sum_{i=1}^{n-1}i = O($n^2$).
+
+
 # Disjoint-set Forests
 
 In this case we use trees to represent sets. When making a set, we only have the root and its value. Every other object that is being adde to the set points to its parent. Using the trees straight forward  will not improve the execution time. However, there are **two heuristics: union by rank and path compression** that can reduce the execution time. 
