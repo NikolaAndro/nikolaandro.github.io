@@ -85,10 +85,13 @@ Existing sets:
 Each set in this example can be represented using a linked list. Each member of the list contains the set member, the pointer to the next object in the list , and the pointer to the previous member in hte list.
 The order of the objects in the list does not matter. 
 
-In this case, Make_set(x) and Find_Set(x) require O(1) time. For Make_Set we just create a new linked list with the the only element x. For Find_Set(x) we just return the 
-member variable in the object that we are pointing to. 
+In this case, Make_set(x) and Find_Set(x) require O(1) time. For Make_Set we just create a new linked list with the the only element x. For Find_Set(x) we just return the member variable in the object that we are pointing to. 
 
 However, the Union(x,y) funuction would take  much longer O( $n^2$ ).
+
+### A weighted Union Heuristic
+
+Uion(x,y) in average takes O(n) time because we may be appending a longer list to the shorter one. What if we could always append only the shorter list to the longer one? We can do that by applying **weigted-union heiristic** where each list also includes the length of the list. Then we will always be able to append the shorter list to the longer one.
 
 **Problem 2**
 
@@ -107,7 +110,15 @@ Show the status of the datastructures using linked lists:
 
 # Disjoint-set Forests
 
-In this case we use trees to represent sets. When making a set, we only have the root and its value. Every other object that is being adde to the set points to its parent. 
+In this case we use trees to represent sets. When making a set, we only have the root and its value. Every other object that is being adde to the set points to its parent. Using the trees straight forward  will not improve the execution time. However, there are **two heuristics: union by rank and path compression** that can reduce the execution time. 
+
+In this approach, Make_Set(x) crfeates a new tree with the root x. Find_Set(x) will iterate from the given node until reach the root because the root node represent the whole set. Union(x,y) causes the root of one tree to point to the root of the other tree.
+
+### Heuristics for runtime improvement
+
+**Union by rank** - in this approach for each node we assign a **rank** to each node. **Rank** represents the upper bound on the height of the tree. Finally, we make the root with smaller rank point to the root with the larger rank durin the Union(x,y) operation. 
+
+**Path Compression** - in this approach...
 
 Show the status of the datastructures using disjoint forests with union by size and path compression:
 
