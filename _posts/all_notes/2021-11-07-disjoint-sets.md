@@ -125,6 +125,10 @@ Show the status of the datastructures using disjoint forests with union by size 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 ![data](../../assets/posts_images/disjoint_2.png)
 
+**Time Complexity of disjoint-set forests:**
+
+If we perform *m* operations and if there are *n* elements, the time complexity will be O(m  _&alpha;_ (n)), where  _&alpha;_ (n) is a very slow growing function that is <= 4. This time complexity then turns into O(4m), which is O(m).
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Nikola Andrić
 
