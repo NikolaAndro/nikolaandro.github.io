@@ -110,7 +110,14 @@ Show the status of the datastructures using linked lists:
 
 **Time Complexity of Linked-list disjoint sets:**
 
-Since we performed *m* operations on *n* objects, we can assume that this requires $O(n^2)$ time. We execute Make_Set n times followed by n-1 union operations. Hence the total number of objects updated my the Union function is \sum_{i=1}^{n-1}i = O($n^2$).
+Since we performed *m* operations on *n* objects, we can assume that this requires $O(n^2)$ time. We execute Make_Set n times followed by n-1 union operations. Hence the total number of objects updated my the Union function is $\sum_{i=1}^{n-1} i $= O($n^2$). \sum_{i=1}^{10} t_i
+Here is another example where the *i*, or the "what to sum," is different:
+
+![sum2](http://latex.codecogs.com/svg.latex?%5Csum_%7Bi%3D1%7D%5E%7B100%7D%282i&plus;1%29)
+
+ \sum_{i=1}^{100}(2i+1) 
+
+
 
 
 # Disjoint-set Forests
