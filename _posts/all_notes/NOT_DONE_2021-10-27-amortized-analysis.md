@@ -6,7 +6,7 @@ categories: post
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-In the **amortized analysis**, we average the time required to perform a sequence of operations over the number of operations performed. The difference between amortized and avereage-case analysis is that amortized  analysis does not involve probability, but it guarantees the *average performance of each operation in the worst case.*
+In the **amortized analysis**, we average the time required to perform a **sequence of operations**. The difference between amortized and avereage-case analysis is that amortized  analysis does not involve probability, but it guarantees the *average performance of each operation in the worst case.*
 
 
 There are 3 different approaches to amortized analysis:
@@ -36,6 +36,50 @@ The sum of amortized costs should always be bigger because we want the upper bou
 # Agregate Method
 
 The agregate method represents the **amortized cost** as the average cost per operation T(n)/n. Even though different operations may exist, they will all be assigned the same amortized cost by this method (accounting and potential method assign different amortized costs to different operations). This is why this method is the most intuitive, but also recognized as the weakest method to perform the amortization.
+
+### Assume that we are given a problem of the **Augmented Stack**:
+
+A stack S has the following properties:
+
+Push(x, S) - pushes element x on the stack - runtime O(1)
+Pop(S) - runtime O(1) 
+Multipop(S,k) pops the min(k, |S|) - pops the min(k,|S|) top elements of S - runtime O(min(k,|S|)
+
+Suppose that a sequence of n operations takes T(n) time. Then the amortized cost per operation is defined to be T(n)/n.
+
+The amortized cost applies to each operation, even when there are several different types of operations. 
+
+In a sequence of n operations, the stack never holds more than n elements. Thus, the cost of a multipop operation is O(n).
+
+It follows that the worst-case running time of any sequence of n stack operations is O(n2). However, this is an over-estimate!
+
+**The total number of pops or multipops in the entire sequence of operations is <= the total number of pushes.**
+
+Suppose that the maximum number of Push operations in the sequence is n. So the time for entire sequence is O(n). 
+
+Amortized cost per operation: O(n)/n = O(1).
+
+### Assume that we are given a problem of the **Binary Counter**:
+
+A binary k-bit counter can be implemented with a k-element binary array. The counter is initially 0.  
+
+The only operation is increment(A), which adds 1 to the current number in the counter. 00000000, 00000001, 00000010, 00000011, 00000100 ... 
+
+The worst case running time occurs when all k bits are flipped, so increment(A) has running time O(k).
+
+In a sequence of n increment operations, few increments will cause that many bits to flip. Indeed,
+
+bit 0 flips with every increment 
+
+bit 1 flips with every 2nd increment 
+
+bit 2 flips with every 4th increment, ...
+
+Total number of bit flips in n increment operations is $$ n + \frac{n}{2} + \frac{n}{4} + ... + \frac{n}{2^{k}} < n(\frac{1}{1- \frac{1}{2}})= 2n $$
+
+So total cost of the sequence is O(n). 
+
+Amortized cost per operation is O(n)/n = O(1). 
 
 **CLRS Chapter 17**
 
