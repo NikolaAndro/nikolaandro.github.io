@@ -13,7 +13,7 @@ The main purpose of Python virtual environments is to create an isolated environ
 This way you can install a specific version of a module on a per project basis without worrying that it will affect your other Python projects.
 
 
-### Steps"
+### Steps:
 
 1. Install the package that provides the venv module
 
@@ -32,6 +32,19 @@ will contain a copy of the Python binary, the pip package manager, the standard 
 
         deactivate
 
+
+### Steps for reinstalling all dependencies into another environment:
+
+1. Create a requirements.txt with all dependencies using the following command:
+
+         pip freeze > requirements.txt
+         
+2. Copy this file to the other machine and install all dependencies using the following command:
+
+         pip install -r requirements.txt
+         
+         
+         
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
  
