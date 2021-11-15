@@ -19,7 +19,7 @@ elements x and y originally are united into a single set and since we cannot hav
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 **Problem 1:**
 
-Suppose that \text{CONNECTED-COMPONENTS}CONNECTED-COMPONENTS is run on the undirected graph G = (V, E), where V = \{a, b, c, d, e, f, g, h, i, j, k\} and the edges of E are 
+Suppose that CONNECTED-COMPONENTS is run on the undirected graph G = (V, E), where V = {a, b, c, d, e, f, g, h, i, j, k} and the edges of E are 
 processed in the order (d,i), (f,k), (g,i), (b,g), (a,h), (i,j), (d,k), (b,j), (d,f), (g,j), (a,e). 
 
 **Solution:**
