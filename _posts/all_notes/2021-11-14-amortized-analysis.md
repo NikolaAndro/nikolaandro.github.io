@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Amortized Analysis of Algorithms"
-date:   2021-10-27 09:29:20 +0700
+date:   2021-11-14 09:29:20 +0700
 categories: post
 ---
 
