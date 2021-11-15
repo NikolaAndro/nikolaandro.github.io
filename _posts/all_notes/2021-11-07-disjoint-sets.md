@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Datastructures for Disjoint Sets"
+title:  "Data Structures for Disjoint Sets"
 date:   2021-11-07 09:29:20 +0700
 categories: post
 ---
