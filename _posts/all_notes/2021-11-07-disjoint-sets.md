@@ -6,15 +6,30 @@ categories: post
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+One of many applications of disjoint data structures is determining the connected components of an undirected graph.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Disjoint sets are the sets that have no element in common. If we were to perform an interception between two disjoint sets, we would get an empty set. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 Each element of a set is represented as an object and we wish to support the following functions of the objects:
 
 - **Make-Set(x)** - This function creates a new set whose only member is x. Since this is the matter of disjoint sets, the element x must not exist in any other set.
-- **Union(x,y)** - This function unites the dynamic sets that contain x and y, which results in a new set that is union of the two united sets. Since the sets that contained
-elements x and y originally are united into a single set and since we cannot have sets with the same elements, we must destroy the original sets where x and y came from and keep the freshly produced dataset.
+- **Union(x,y)** - This function unites the dynamic sets that contain x and y, which results in a new set that is union of the two united sets. Since the sets that contained elements x and y originally are united into a single set and since we cannot have sets with the same elements, we must destroy the original sets where x and y came from and keep the freshly produced dataset.
 - **Find-Set(x)** - This function returns a pointer to the set that contains the element x.
+
+The following CONNECTED-COMPONENTS procedure uses disjoint-set operations to compute the connected components of a graph.
+
+{%highlight ruby%}
+
+ CONNECTED-COMPONENTS(G):
+     for each vertex v in G.V:
+         MAKE_SET(v)
+     for each edge(u,v) in G.E:
+     if FIND_SET(u) != FIND_SET(v)
+         UNION(u,v)
+
+{%endhighlight%}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 **Problem 1:**
