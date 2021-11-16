@@ -16,7 +16,9 @@ E = {(1,2),(2,3),(3,4),...}
  We can see that we are able to derive the spanning trees in multiple ways (some instances represented in the following photos).
  
  ![data](../../assets/posts_images/span_1.png)
+ 
  ![data](../../assets/posts_images/span_2.png)
+ 
  ![data](../../assets/posts_images/span_3.png)
  
  **Minimum Spanning Tree** is a spanning tree that has the minimum value/cost. This is being derived from the set of spanning trees of a ***weighted graph***.  Let's say we have the following graph:
