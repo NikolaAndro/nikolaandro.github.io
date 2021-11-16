@@ -214,7 +214,23 @@ Show the status of the data structures using disjoint forests with union by size
 
 Write a non recursive version of FIND-SET(x).
 
+ANSWER:
 
+{%highlight ruby%}
+
+FIND-SET(x):
+    # create a linked_list
+    A.root = x
+    while x not root:
+        x = x.parent
+        A.add(x)
+    #snice x is the root add it to the list and set it as root
+    A.add(x)
+    A.x = root
+    
+    return A.root
+    
+{%endhighlight%}       
 
 **Time Complexity of disjoint-set forests:**
 
