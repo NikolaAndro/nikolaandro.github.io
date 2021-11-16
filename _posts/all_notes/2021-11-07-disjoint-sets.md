@@ -26,8 +26,8 @@ The following CONNECTED-COMPONENTS procedure uses disjoint-set operations to com
      for each vertex v in G.V:
          MAKE_SET(v)
      for each edge(u,v) in G.E:
-     if FIND_SET(u) != FIND_SET(v)
-         UNION(u,v)
+         if FIND_SET(u) != FIND_SET(v)
+             UNION(u,v)
 
 {%endhighlight%}
 
@@ -122,6 +122,34 @@ Show the status of the data structures using linked lists:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 ![data](../../assets/posts_images/disjoint_1.png)
+
+**Problem 3**
+
+Show the result of hte following code:
+
+{%highlight ruby%}
+
+for i = 1 to 16:
+    MAKE-SET(x_i)
+for i = 1 to 15 by 2:
+    UNION(x_i,x_i+1)
+for i = 1 to 13 by 4:
+    UNION(x_i,x_i+2)
+UNION(x1,x5)
+UNION(x11,x13)
+UNION(x1,x10)
+FIND-SET(x2)
+FIND-SET(x9)
+   
+
+{%endhighlight%}
+
+Result:
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![data](../../assets/posts_images/disjoint_2.png)
+
 
 **Time Complexity of Linked-list disjoint sets:**
 
