@@ -148,7 +148,7 @@ Result:
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-![data](../../assets/posts_images/disjoint_2.png)
+![data](../../assets/posts_images/disjoint_2.jpg)
 
 
 **Time Complexity of Linked-list disjoint sets:**
@@ -175,10 +175,46 @@ In this approach, Make_Set(x) creates a new tree with the root x. Find_Set(x) wi
 
 **Path Compression** - this approach does not change any ranks, but rather changes to what node children point to. If there is a child of another child, the last child will point to the root. This process repeates until all nodes point to the root.
 
+Let us see how would pseudo-code for the functions look like:
+
+{%highlight ruby%}
+
+MAKE_SET(x)
+    x.p = x
+    x.rank = 0
+    
+UNION(x,y)
+    LINK(FIND_SET(x),FIND_SET(y))
+    
+LINK(x,y)
+   if x.rank > y.rank
+       y.p = x
+   else x.p = y
+       if x.rank == y.rank
+           y.rank = y.rank + 1
+          
+FIND_SET(x)
+    if x != x.p
+        x.p = FIND-SET(x.p)
+    return x.p
+
+{%endhighlight%}
+
+
+**Problem 4**
+
 Show the status of the data structures using disjoint forests with union by size and path compression:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 ![data](../../assets/posts_images/disjoint_2.png)
+
+
+
+**Problem 5**
+
+Write a non recursive version of FIND-SET(x).
+
+
 
 **Time Complexity of disjoint-set forests:**
 
