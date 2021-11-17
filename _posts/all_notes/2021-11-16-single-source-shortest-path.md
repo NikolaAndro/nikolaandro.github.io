@@ -64,7 +64,7 @@ Relaxation is widely used. For instance, Dijkstra's algorithm and the shortest p
 
 # The Bellman-Ford algorithm
 
-Given a weighted graphG =(V,E) with source s and weight function w: E -> R, teh Bellman Ford algorithm **returns a boolean value** that indicates if the graph contains a negative weight cycle that is reachable from the source vertex s. The algorithm relaxes the edges of the graph until it achieves the actual shortest path with minimum weight. 
+Given a weighted graphG =(V,E) with source s and weight function w: E -> R, teh Bellman Ford algorithm **returns a boolean value** that indicates if the graph contains a negative weight cycle that is reachable from the source vertex s. The algorithm relaxes the edges of the graph until it achieves the actual shortest path with minimum weight. The number of iterations can maximally be |V| - 1. However, that does not mean that relaxation will not reach the minimum weights on 1st or other iteration other than iteration number |v|-1. 
 
 {% highlight ruby%}
 
@@ -80,9 +80,9 @@ BELLMAN-FORD(G,w,s)
 
 {%endhighlight%}
 
-#Dijkstra's Algorithm
+# Dijkstra's Algorithm
 
-Dijkstra's algorithm solves the single-source shortest-paths problem on a weighted directed graph G = (V,E) for the case in which all edge weights are nonnegative. Thsi algorithm maintains a set S of vertices whose final shortest path weights from the source s have already been determined. The algorithm repeatedly selects a vertex u that is not in the maintainted set S with the minimum shortest path estimate, adds u to the set S, and then relaxes all edges leaving u. What this means is that from the current vertex, the algorithm will select the vertex u with lowest weight. Then it will update any vertex that is connected to the vertex u that can have less value than it has right now (relaxation).
+Dijkstra's algorithm solves the single-source shortest-paths problem on a weighted directed graph G = (V,E) for the case in which all edge weights are nonnegative. This algorithm maintains a set S of vertices whose final shortest path weights from the source s have already been determined. The algorithm repeatedly selects a vertex u that is not in the maintainted set S with the minimum shortest path estimate, adds u to the set S, and then relaxes all edges leaving u. What this means is that from the current vertex, the algorithm will select the vertex u with lowest weight. Then it will update any vertex that is connected to the vertex u that can have less value than it has right now (relaxation).
 
 {% highlight ruby%}
 
