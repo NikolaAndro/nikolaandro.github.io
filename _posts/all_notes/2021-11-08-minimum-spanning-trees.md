@@ -69,5 +69,10 @@ Kruskal's algorithm states that we should always select the minimum cost edge th
  ![data](../../assets/posts_images/kruskal_0.jpg)
 
 
+**Problems To Solve:**
+
+1. [Account Merge](https://leetcode.com/problems/accounts-merge/)
+2. [Min cost to connect all points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
  Nikola Andrić
