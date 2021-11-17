@@ -73,6 +73,7 @@ Kruskal's algorithm states that we should always select the minimum cost edge th
 
 1. [Account Merge](https://leetcode.com/problems/accounts-merge/)
 2. [Min cost to connect all points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+3. Find the second best MST in a given graph (assuming that only one MST exists).
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
  Nikola Andrić
