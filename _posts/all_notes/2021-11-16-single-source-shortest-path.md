@@ -59,12 +59,12 @@ RELAX(u,v,w)
 We can see the following examples. In the left example the current estimate for the shortest path to node u is 5 and the current estimate for the shortest path to node v is 9.  Now we want to see if we can **relax** the vertex v going through the vertex u. If we chech the inequelity v.d > u.d + w(u,v) is true since 9 > 5 + 2. Hence, we can update/relax the shortest path to vertex v and assign it a new estimated value of v.d = 7.
 
 
-Relaxation is widely used. For instance, Dijkstra's algorithm and the shortest path algorithm for directed acyclic graphs relax each edge exactly once, where Bellman-Ford algorithm relxes each edge |V| - 1 times. 
+Relaxation is widely used. For instance, Dijkstra's algorithm and the shortest path algorithm for directed acyclic graphs relax each edge exactly once, where Bellman-Ford algorithm relxes each edge \|V\| - 1 times. 
 
 
 # The Bellman-Ford algorithm
 
-Given a weighted graphG =(V,E) with source s and weight function w: E -> R, teh Bellman Ford algorithm **returns a boolean value** that indicates if the graph contains a negative weight cycle that is reachable from the source vertex s. The algorithm relaxes the edges of the graph until it achieves the actual shortest path with minimum weight. The number of iterations can maximally be |V| - 1. However, that does not mean that relaxation will not reach the minimum weights on 1st or other iteration other than iteration number |v|-1. 
+Given a weighted graphG =(V,E) with source s and weight function w: E -> R, teh Bellman Ford algorithm **returns a boolean value** that indicates if the graph contains a negative weight cycle that is reachable from the source vertex s. The algorithm relaxes the edges of the graph until it achieves the actual shortest path with minimum weight. The number of iterations can maximally be \|V\| - 1. However, that does not mean that relaxation will not reach the minimum weights on 1st or other iteration other than iteration number \| v \|-1. 
 
 {% highlight ruby%}
 
