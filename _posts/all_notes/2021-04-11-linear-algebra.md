@@ -7,7 +7,7 @@ categories: post
 
 # Differentiability
 
-http://www.math.uri.edu/~mcomerford/math141/Fall11/lesson13.pdf
+[Source - link](http://www.math.uri.edu/~mcomerford/math141/Fall11/lesson13.pdf)
 
 # Product Rule
 
@@ -28,5 +28,5 @@ If the two functions f(x) and g(x) are differentiable (i.e. the derivative exist
 
 # L'Hopital's Rule
 
-https://www.mathsisfun.com/calculus/l-hopitals-rule.html
+[Source - link](https://www.mathsisfun.com/calculus/l-hopitals-rule.html)
 
