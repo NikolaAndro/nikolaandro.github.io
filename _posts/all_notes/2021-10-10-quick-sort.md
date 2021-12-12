@@ -16,6 +16,14 @@ There are many different versions of quickSort that pick pivot in different ways
 The main part of the algorithm is the partition() where the pivot x is being placed in a sorted spot in the array. That is being done in a way that all element that are
 less than x are put on hte left side of x and other elements on the right side of x. This should be done in linear time.
 
+- Partition of elements take n time
+- And in quicksort problem is divide by the factor 2
+- Best Time Complexity : O(nlogn)
+- Average Time Complexity : O(nlogn)
+- Worst Time Complexity : O(n^2)
+- Worst Case will happen when array is sorted
+
+
 {%highlight ruby%}
 
 quickSort(arr[], low, high)
@@ -67,3 +75,22 @@ def partition(start, end, array):
     return end
     
 {%endhighlight%}
+
+
+**What is recurrence for worst case of QuickSort and what is the time complexity in Worst case?**
+
+Recurrence is T(n) = T(n-1) + O(n) and time complexity is O(n^2)
+
+The worst case of QuickSort occurs when the picked pivot is always one of the corner elements in sorted array. In worst case, QuickSort recursively calls one subproblem with size 0 and other subproblem with size (n-1). So recurrence is T(n) = T(n-1) + T(0) + O(n). 
+This above expression can be rewritten as T(n) = T(n-1) + O(n).
+
+**Suppose we have a O(n) time algorithm that finds median of an unsorted array. Now consider a QuickSort implementation where we first find median using the above algorithm, then use median as pivot. What will be the worst case time complexity of this modified QuickSort?**
+
+O(n lg(n))
+
+If we use median as a pivot element, then the recurrence for all cases becomes T(n) = 2T(n/2) + O(n) The above recurrence can be solved using Master Method. It falls in case 2 of master method.
+
+
+
+
+
