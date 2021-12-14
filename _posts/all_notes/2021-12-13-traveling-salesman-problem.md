@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Traveling Salesman Problem"
-date:   2021-13-12 09:29:20 +0700
+date:   2021-12-13 09:29:20 +0700
 categories: post
 ---
 
