@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Hadoop "
+title:  "Hadoop & MapReduce"
 date:   2021-10-15 09:29:20 +0700
 categories: post
 ---
@@ -58,14 +58,45 @@ A rack contains many DataNode machines and there are several such racks in the p
 
 In traditional processing of data, the data would be proccessed on a single machine with one processor or a few processors, which would not be efficient when it comes to big data. It would be costly (time).
 
-To overcome this, **MapReduce** splits the data into parts and processes those parts on different data ndoes. The individual results are agregated to give the final output.
+To overcome this, **MapReduce** splits the data into parts and processes those parts on different data nodes. The individual results are agregated to give the final output.
 
-MapReduce is the data processing layer of Hadoop. It is a software framework that allows you to write applications for processing a large amount of data. MapReduce runs these applications in parallel on a cluster of low-end machines. It does so in a reliable and fault-tolerant manner.
+MapReduce is the data processing layer of Hadoop. In other words MapReduce is **a software framework and a programming MODEL** used for processing huge amounts of data. MapReduce runs these applications in parallel on a cluster of low-end machines. It does so in a reliable and fault-tolerant manner.
 
 MapReduce job comprises a number of map tasks and reduces tasks. Each task works on a part of data. This distributes the load across the cluster. The function of **Map tasks** is to load, parse, transform and filter data. Each **reduce task** works on the sub-set of output from the map tasks. **Reduce task** applies grouping and aggregation to this intermediate data from the map tasks.
 
+The input to each phase is **key-value pairs**. In addition, every programmer needs to specify two functions: map function and reduce function.
 
+### Example
 
+Input:
+
+{%highlight ruby%}
+Welcome to Hadoop Class
+Hadoop is good
+Hadoop is bad
+{% endhighlight%}
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![HADOOP](../../assets/posts_images/hadoop_7.png)
+
+**Input Splits:**
+
+An input to a MapReduce in Big Data job is divided into fixed-size pieces called input splits Input split is a chunk of the input that is consumed by a single map
+
+**Mapping**
+
+This is the very first phase in the execution of map-reduce program. In this phase data in each split is passed to a mapping function to produce output values. In our example, a job of mapping phase is to count a number of occurrences of each word from input splits (more details about input-split is given below) and prepare a list in the form of <word, frequency>
+
+**Shuffling**
+
+This phase consumes the output of Mapping phase. Its task is to consolidate the relevant records from Mapping phase output. In our example, the same words are clubed together along with their respective frequency.
+
+**Reducing**
+
+In this phase, output values from the Shuffling phase are aggregated. This phase combines values from Shuffling phase and returns a single output value. In short, this phase summarizes the complete dataset.
+
+In our example, this phase aggregates the values from Shuffling phase i.e., calculates total occurrences of each word.
 
 ## Map Task
 
@@ -81,6 +112,7 @@ MapReduce has a simple model of data processing. Inputs and Outputs for the map 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 ![HADOOP](../../assets/posts_images/hadoop_4.png)
+
 
 map: (K1, V1) → list(K2, V2)
 
