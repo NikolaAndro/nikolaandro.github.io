@@ -62,6 +62,7 @@ Some of the problems that can be solved using the dynamic programming:
   - [Longest Common Subsequence](https://nikolaandro.github.io/longest-common-subsequence-dynamic-programming/)
   - [Coin Changing Problem](https://nikolaandro.github.io/coin-change-dynamic-programming/)
   - [Knapsack Problem](https://nikolaandro.github.io/knapsack-problem-dynamic-programming/)
+  - [Longest Increasing Subsequence (LIS)](https://nikolaandro.github.io/longest-increasing-subsequence-dynamic-programming/)
   - Graph Problems
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
