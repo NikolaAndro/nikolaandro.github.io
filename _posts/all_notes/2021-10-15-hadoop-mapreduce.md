@@ -5,6 +5,10 @@ date:   2021-10-15 09:29:20 +0700
 categories: post
 ---
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![databases_examaples](../../assets/posts_images/big_data_timeline.png)
+
+
 During the 1990's data was usually collected in files that were in format of rows and columns. The amount of data was growing slowly, so a single storage unit and a processor would do the job of storing and processing the data.
 
 However, today data is being shared over the internet in countless formats and in huge amounts. Handling this much data in so many different formats became difficult. This type of data is called **BIG DATA.**. At that point in time, **Hadoop** was invented to deal with this problem!
