@@ -44,6 +44,16 @@ will contain a copy of the Python binary, the pip package manager, the standard 
          pip install -r requirements.txt
          
          
+ 
+## Conda Python Environment
+
+1. Create the environment:
+
+         conda create --name my_project_venv python=3.6
+         
+2. Activate the environment:
+
+         activate my_project_venv         
          
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  Nikola Andrić
