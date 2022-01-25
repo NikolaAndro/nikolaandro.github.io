@@ -266,4 +266,114 @@ You can think of this update rule as defining the gradient descent algorithm. It
 
 Indeed, there's even a sense in which gradient descent is the optimal strategy for searching for a minimum. Let's suppose that we're trying to make a move Δv in position so as to decrease C as much as possible. This is equivalent to minimizing ΔC≈∇C⋅Δv. We'll constrain the size of the move so that ∥Δv∥=ϵ for some small fixed ϵ>0. In other words, we want a move that is a small step of a fixed size, and we're trying to find the movement direction which decreases C as much as possible. It can be proved that the choice of Δv which minimizes ∇C⋅Δv is Δv=−η∇C, where η=ϵ/∥∇C∥ is determined by the size constraint ∥Δv∥=ϵ. So gradient descent can be viewed as a way of taking small steps in the direction which does the most to immediately decrease C.
 
+# How backpropagation algorithm works
+
+Let's begin with a notation which lets us refer to weights in the network in an unambiguous way. We'll use w<sup>l</sup><sub>jk</sub> to denote the weight for the connection from the kth neuron in the (l−1)th layer to the jth neuron in the lth layer. So, for example, the diagram below shows the weight on a connection from the fourth neuron in the second layer to the second neuron in the third layer of a network:
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![ANN](../../assets/posts_images/ann_30.png)
+
+We use a similar notation for the network's biases and activations. Explicitly, we use b<sup>l</sup><sub>j</sub> for the bias of the jth neuron in the lth layer. And we use a<sup>l</sup><sub>j</sub> for the activation of the jth neuron in the lth layer. The following diagram shows examples of these notations in use:
+
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![ANN](../../assets/posts_images/ann_31.png)
+
+With these notations, the activation alj of the jth neuron in the lth layer is related to the activations in the (l−1)th layer by the equation:
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![ANN](../../assets/posts_images/ann_32.png)
+
+where the sum is over all neurons k in the (l−1)th layer. To rewrite this expression in a matrix form we define a weight matrix wl for each layer, l. The entries of the weight matrix w<sup>l</sup> are just the weights connecting to the lth layer of neurons, that is, the entry in the jth row and kth column is w<sup>l</sup><sub>jk</sub>. Similarly, for each layer l we define a bias vector, b<sup>l</sup>. You can probably guess how this works - the components of the bias vector are just the values b<sup>l</sup><sub>j</sub>, one component for each neuron in the lth layer. And finally, we define an activation vector al whose components are the activations a<sup>l</sup><sub>j</sub>.
+
+Knowing this, previous equation can be rewritten in the beautiful and compact vectorized form:
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![ANN](../../assets/posts_images/ann_33.png)
+
+When using previous equation to compute a<sup>l</sup>, we compute the intermediate quantity z<sup>l</sup>≡w<sup>l</sup>a<sup>l</sup>−1+b<sup>l</sup> along the way. This quantity turns out to be useful enough to be worth naming: we call z<sup>l</sup> the weighted input to the neurons in layer l. Previous equation is sometimes written in terms of the weighted input, as a<sup>l</sup>=σ(z<sup>l</sup>). It's also worth noting that z<sup>l</sup> has components z<sup>l</sup><sub>j</sub>=∑<sub>k</sub>w<sup>l</sup><sub>jk</sub>a<sup>l−1</sup><sub>k</sub>+b<sup>l</sup><sub>j</sub>, that is, z<sup>l</sup><sub>j</sub> is just the weighted input to the activation function for neuron j in layer l.
+
+
+# The two assumptions we need about the cost function
+
+The goal of backpropagation is to compute the partial derivatives ∂C/∂w and ∂C/∂b of the cost function C with respect to any weight w or bias b in the network. For backpropagation to work we need to make two main assumptions about the form of the cost function. Before stating those assumptions, though, it's useful to have an example cost function in mind.
+
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![ANN](../../assets/posts_images/ann_34.png)
+
+where: n is the total number of training examples; the sum is over individual training examples, x; y=y(x) is the corresponding desired output; L denotes the number of layers in the network; and a<sup>L</sup>=a<sup>L</sup>(x) is the vector of activations output from the network when x is input.
+
+Okay, so what assumptions do we need to make about our cost function, C, in order that backpropagation can be applied? The first assumption we need is that the cost function can be written as an average C=1/n * ∑<sub>x</sub>C<sub>x</sub> over cost functions C<sub>x</sub> for individual training examples, x. This is the case for the quadratic cost function, where the cost for a single training example is Cx=1/2∥y−a<sup>L</sup>∥<sup>2</sup>. 
  
+The reason we need this assumption is because what backpropagation actually lets us do is compute the partial derivatives ∂C<sub>x</sub>/∂w and ∂C<sub>x</sub>/∂b for a single training example. We then recover ∂C/∂w and ∂C/∂b by averaging over training examples. In fact, with this assumption in mind, we'll suppose the training example x has been fixed, and drop the x subscript, writing the cost C<sub>x</sub> as C. 
+
+The second assumption we make about the cost is that it can be written as a function of the outputs from the neural network:
+
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![ANN](../../assets/posts_images/ann_35.png)
+
+
+For example, the quadratic cost function satisfies this requirement, since the quadratic cost for a single training example x may be written as
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![ANN](../../assets/posts_images/ann_36.png)
+
+and thus is a function of the output activations. Of course, this cost function also depends on the desired output y, and you may wonder why we're not regarding the cost also as a function of y. Remember, though, that the input training example x is fixed, and so the output y is also a fixed parameter. In particular, it's not something we can modify by changing the weights and biases in any way, i.e., it's not something which the neural network learns. And so it makes sense to regard C as a function of the output activations a<sup>L</sup> alone, with y merely a parameter that helps define that function.
+
+# The Hadamard product
+
+The backpropagation algorithm is based on common linear algebraic operations - things like vector addition, multiplying a vector by a matrix, and so on. But one of the operations is a little less commonly used. In particular, suppose s and t are two vectors of the same dimension. Then we use s⊙t to denote the elementwise product of the two vectors. Thus the components of s⊙t are just (s⊙t)<sub>j</sub>=s<sub>j</sub>t<sub>j</sub>. As an example,
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![ANN](../../assets/posts_images/ann_37.png)
+
+This kind of elementwise multiplication is sometimes called the **Hadamard product or Schur product.** 
+
+# The four fundamental equations behind backpropagation
+
+**Backpropagation is about understanding how changing the weights and biases in a network changes the cost function.**
+
+Ultimately, this means computing the partial derivatives ∂C/∂w<sup>l</sup><sub>jk</sub> and ∂C/∂b<sup>l</sup><sub>j</sub>. But to compute those, we first introduce an intermediate quantity, δ<sup>l</sup><sub>j</sub>, which we call the error in the jth neuron in the lth layer. Backpropagation will give us a procedure to compute the error δ<sup>l</sup><sub>j</sub>, and then will relate δ<sup>l</sup><sub>j</sub> to ∂C/∂w<sup>l</sup><sub>jk</sub> and ∂C/∂b<sup>l</sup><sub>j</sub>.
+
+To understand how the error is defined, imagine there is a demon in our neural network:
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![ANN](../../assets/posts_images/ann_38.png)
+
+The demon sits at the jth neuron in layer l. As the input to the neuron comes in, the demon messes with the neuron's operation. It adds a little change Δz<sup>l</sup><sub>j</sub> to the neuron's weighted input, so that instead of outputting σ(z<sup>l</sup><sub>j</sub>), the neuron instead outputs σ(z<sup>l</sup><sub>j</sub>+Δz<sup>l</sup><sub>j</sub>). This change propagates through later layers in the network, finally causing the overall cost to change by an amount ∂C/∂z<sup>l</sup><sub>j</sub> * Δz<sup>l</sup><sub>j</sub>.
+
+Now, this demon is a good demon, and is trying to help you improve the cost, i.e., they're trying to find a Δz<sup>l</sup><sub>j</sub> which makes the cost smaller. Suppose ∂C∂z<sup>l</sup><sub>j</sub> has a large value (either positive or negative). Then the demon can lower the cost quite a bit by choosing Δzz<sup>l</sup><sub>j</sub> to have the opposite sign to ∂C∂z<sup>l</sup><sub>j</sub>. By contrast, if ∂C∂z<sup>l</sup><sub>j</sub> is close to zero, then the demon can't improve the cost much at all by perturbing the weighted input z<sup>l</sup><sub>j</sub>. So far as the demon can tell, the neuron is already pretty near optimal.
+
+Motivated by this story, we define the error δ<sup>l</sup><sub>j</sub> of neuron j in layer l by:
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![ANN](../../assets/posts_images/ann_39.png)
+
+As per our usual conventions, we use δ<sup>l</sup> to denote the vector of errors associated with layer l. Backpropagation will give us a way of computing δ<sup>l</sup> for every layer, and then relating those errors to the quantities of real interest, ∂C/∂w<sup>l</sup><sub>jk</sub> and ∂C/∂b<sup>l</sup><sub>j</sub>.
+
+An equation for the error in the output layer, δ<sup>L</sup>: The components of δ<sup>L</sup> are given by:
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![ANN](../../assets/posts_images/ann_40.png)
+
+The first term on the right, ∂C/∂a<sup>L</sup><sub>j</sub>, just measures how fast the cost is changing as a function of the jth output activation. If, for example, C doesn't depend much on a particular output neuron, j, then δ<sup>L</sup><sub>j</sub> will be small, which is what we'd expect. The second term on the right, σ′(z<sup>L</sup><sub>j</sub>), measures how fast the activation function σ is changing at z<sup>L</sup><sub>j</sub>.
+
+This equation is a componentwise expression for δ<sup>L</sup>. It's a perfectly good expression, but not the matrix-based form we want for backpropagation. However, it's easy to rewrite the equation in a matrix-based form, as:
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![ANN](../../assets/posts_images/ann_41.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
