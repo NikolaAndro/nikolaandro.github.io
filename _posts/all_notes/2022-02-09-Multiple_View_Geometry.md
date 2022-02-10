@@ -116,17 +116,37 @@ the imaged point in P<sup>2</sup> . This matrix P is known as **the camera matri
 In summary, the action of a projective camera on a point in space may be expressed in terms of a linear mapping of homogeneous coordinates as
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-![ANN](../../assets/posts_images/homo_0.png)
+![homography](../../assets/posts_images/homo_0.png)
 
 Furthermore, if all the points lie on a plane (we may choose this as the plane Z = 0 ) then the linear mapping reduces to:
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-![ANN](../../assets/posts_images/homo_1.png)
+![homography](../../assets/posts_images/homo_1.png)
 
 which is **a projective transformation.**
 
 
-**Cameras as points. **
+**Cameras as points. ** 
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![homography](../../assets/posts_images/homo_2.png)
+
+The camera centre is the essence. (a) Image formation: the image points x<sub>i</sub> are the intersection of a plane with rays from the space points X<sub>i</sub> through the camera centre C . (b) If the space points are coplanar then there is a projective transformation between the world and image planes, x<sub>i</sub> = H<sub>3x3</sub> . (c) All images with the same camera centre are related by a projective transformation, x<sub>i</sub> = H<sub>3x3</sub> x<sub>i</sub> . Compare (b) and (c) – in both cases planes are mapped to one another by rays through a centre. In (b) the mapping is between a scene and image plane, in (c) between two image planes. (d) If the camera centre moves, then the images are in general not related by a projective transformation, unless (e) all the space points are coplanar. 
+
+
+## 3D reconstructions from images
+
+Using techniques of projective geometry, it is possible in many instances to reconstruct scenes from a single image. This cannot be done without some assumptions being made about the imaged scene. Typical techniques involve the analysis of features such as parallel lines and vanishing points to determine the af ﬁ ne structure of the scene, for
+example by determining the line at in ﬁ nity for observed planes in the image. Knowledge (or assumptions) about angles observed in the scene, most particularly orthogonal lines or planes, can be used to upgrade the af ﬁ ne reconstruction to Euclidean. It is not yet possible for such techniques to be fully automatic. However, projective geometric knowledge may be built into a system that allows user-guided single-view reconstruction of the scene. Such techniques have been used to reconstruct 3D texture mapped graphical models derived from old-master paintings. Starting in the Renaissance, paintings with extremely accurate perspective were produced. In the following figure a reconstruction carried out from such a painting is shown.
+
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+![homography](../../assets/posts_images/homo_3.png)
+
+Single view reconstruction. (a) Original painting – St. Jerome in his study, 1630, Hendrick van Steenwijck (1580-1649), Joseph R. Ritman Private Collection, Amsterdam, The Netherlands. (b) (c)(d) Views of the 3D model created from the painting. Figures courtesy of Antonio Criminisi.
+
+
+## Reconstruction from more than 1 view
 
 
 
