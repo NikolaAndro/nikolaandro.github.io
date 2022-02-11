@@ -148,7 +148,17 @@ Single view reconstruction. (a) Original painting – St. Jerome in his study, 1
 
 ## Reconstruction from more than 1 view
 
+![homography](../../assets/posts_images/homo_4.png)
 
+![homography](../../assets/posts_images/homo_5.png)
+
+![homography](../../assets/posts_images/homo_6.png)
+
+![homography](../../assets/posts_images/homo_7.png)
+
+![homography](../../assets/posts_images/homo_8.png)
+
+![homography](../../assets/posts_images/homo_9.png)
 
 
 
