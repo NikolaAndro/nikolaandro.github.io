@@ -14,3 +14,8 @@
 - title: github
   url: https://github.com/NikolaAndro
   external: true
+ 
+# Example:
+- title: workouts
+  url: https://nikolaandro.github.io/Workouts_Page/
+  external: true
