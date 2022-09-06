@@ -16,3 +16,4 @@ If you have any questions or suggestions, please send me an email.
 - [LinkedIn](https://www.linkedin.com/in/nikola-andric-128597179/)
 - [Github](github.com/NikolaAndro)
 - [Discord](https://discord.gg/m2YbK5RN)
+- [Workouts Page](https://nikolaandro.github.io/Workouts_Page/)
