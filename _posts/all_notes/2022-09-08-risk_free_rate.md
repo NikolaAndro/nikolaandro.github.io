@@ -81,3 +81,13 @@ While the risk-free rate is ultimately a theoretical concept, the ability to cal
 First, you can evaluate whether an investment will help preserve your purchasing power in an inflationary economy. Next, you can evaluate investments of different durations to see if a particular duration will offer you returns that help keep pace with or outpace inflation for the investment term.
 
 It’s never a bad idea to run the numbers to see if a particular low-risk investment makes sense in the current economy. You now have a tool to do just that, and it only takes moments to figure out your risk-free rate of return.
+
+
+# Risk-Free Rate in Options
+
+The effect of the rfr on option prices is not as clear-cut as one would expect. As the economy expands, rates tend to increase, but so does the expected rate of share price increases, because dividends increase. It is also known that the present value of future cash flows also decreases as rates increase.
+
+These two effects tend to reduce the prices of put options, i.e. the value of put options decreases as the rfr increases. However, it has been shown that the value of call options increase as the rfr increases, as the former effect tends to dominate the latter effect.
+
+Risk-free rates are further used in Black-Scholes option pricing model as well as in Binomial-option pricing model.
+
