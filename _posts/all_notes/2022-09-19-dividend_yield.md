@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Risk-Free Rate"
+title:  "Dividend Yield"
 date:   2022-09-08 09:29:20 +0700
 categories: post
 ---
