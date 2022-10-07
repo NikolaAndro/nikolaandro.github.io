@@ -1,4 +1,4 @@
-  ---
+---
 layout: post
 title:  "Virtual Machine Export and Import"
 date:   2022-10-06 09:29:20 +0700
