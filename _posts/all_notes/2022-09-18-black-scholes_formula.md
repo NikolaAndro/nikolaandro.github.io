@@ -3,6 +3,7 @@ layout: post
 title:  "Black-Scholes Formula"
 date:   2022-09-18 09:29:20 +0700
 categories: post
+topic: finance
 ---
 
 # Black-Scholes Formula

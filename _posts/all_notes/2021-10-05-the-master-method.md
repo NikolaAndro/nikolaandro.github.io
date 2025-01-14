@@ -3,6 +3,7 @@ layout: post
 title:  "The Master Method - Reccurences"
 date:   2021-10-05 09:29:20 +0700
 categories: post
+topic:
 ---
 
 In this method, the recurrences are solved in the following form:

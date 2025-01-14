@@ -1,8 +1,9 @@
-  ---
+---
 layout: post
 title:  "Uninstall Python - Linux"
 date:   2022-10-03 09:29:20 +0700
 categories: post
+topic: python
 ---
 
 # Check what python verssion you have

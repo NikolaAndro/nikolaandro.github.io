@@ -114,6 +114,6 @@ print("The final length of LCS is:", lcs(X,Y))
 ![printing representation](../../assets/posts_images/LCS_0.png)
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- Nikola Andrić
+ The Squid
 
  

@@ -360,4 +360,4 @@ Amortized cost: c_i + B_i - B_i-1 <= t_i + 1 -t_i + 1 = 2
 Advantage of the potential method: We can use it to analyze counters that do not start from 0.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- Nikola Andrić
+ The Squid

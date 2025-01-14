@@ -85,6 +85,6 @@ print('\n\nMaximum value this knapsack is ',knapSack(W, weight, val, n),'.')
  *Variation of this problem would be fractional knapsack prblem!*
  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- Nikola Andrić
+ The Squid
 
  

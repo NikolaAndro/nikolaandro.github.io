@@ -3,6 +3,7 @@ layout: post
 title:  "Single-Source Shortest Paths"
 date:   2021-11-16 09:29:20 +0700
 categories: post
+topic: computer science
 ---
 
 The **Shortest-paths problem** is represented as a weighted graph G = (V,E) with a weighted function w that represents metrics of the real world such as distance, time, cost
@@ -100,4 +101,4 @@ DIJKSTRA(G,w,s)
 
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- Nikola Andrić
+ The Squid

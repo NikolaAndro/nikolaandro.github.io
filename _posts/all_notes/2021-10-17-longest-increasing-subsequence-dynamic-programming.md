@@ -87,6 +87,6 @@ print("Length of LIS is ", lis(arr))
      - Extract the LDS
      
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- Nikola Andrić
+ The Squid
 
  

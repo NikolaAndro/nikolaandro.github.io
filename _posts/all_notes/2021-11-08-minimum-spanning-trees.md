@@ -76,4 +76,4 @@ Kruskal's algorithm states that we should always select the minimum cost edge th
 3. Find the second best MST in a given graph (assuming that only one MST exists).
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
- Nikola Andrić
+ The Squid

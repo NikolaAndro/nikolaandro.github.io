@@ -40,4 +40,4 @@ Four step method:
 4.  Construct an optimal solution from computedinformation.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Nikola Andrić
+The Squid

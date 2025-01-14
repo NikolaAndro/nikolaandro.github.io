@@ -3,6 +3,7 @@ layout: post
 title:  "SSH Key Setup - GitHub"
 date:   2021-10-27 09:29:20 +0700
 categories: post
+topic: github
 ---
 
 # SSH key setup

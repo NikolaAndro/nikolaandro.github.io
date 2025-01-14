@@ -3,6 +3,7 @@ layout: post
 title:  "Python Virtual Environment"
 date:   2021-11-01 09:29:20 +0700
 categories: post
+topic: python
 ---
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -56,5 +57,5 @@ will contain a copy of the Python binary, the pip package manager, the standard 
          activate my_project_venv         
          
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- Nikola Andrić
+ The Squid
  

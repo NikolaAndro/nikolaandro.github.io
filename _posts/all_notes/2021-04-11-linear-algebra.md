@@ -3,6 +3,7 @@ layout: post
 title:  "Linear Algebra"
 date:   2021-4-11 09:29:20 +0700
 categories: post
+topic:
 ---
 
 # Differentiability

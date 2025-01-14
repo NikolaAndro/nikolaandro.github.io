@@ -3,6 +3,7 @@ layout: post
 title:  "Hadoop & MapReduce"
 date:   2021-10-15 09:29:20 +0700
 categories: post
+topic: big data
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 

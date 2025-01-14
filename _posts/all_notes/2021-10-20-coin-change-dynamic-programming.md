@@ -116,7 +116,7 @@ print("The minimum amount of coins from the given set of coins to reach the valu
  *Variation of this problem is when coins can be picked only once!*
  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- Nikola Andrić
+ The Squid
  
  
 

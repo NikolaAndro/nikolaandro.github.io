@@ -88,4 +88,4 @@ categories: post
  - [Reinforcement Learning](https://nikolaandro.github.io/reinforcement-learning/)
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- Nikola Andrić
+ The Squid

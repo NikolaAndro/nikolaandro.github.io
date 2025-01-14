@@ -3,6 +3,7 @@ layout: post
 title:  "Virtual Machine Export and Import"
 date:   2022-10-06 09:29:20 +0700
 categories: post
+topic: software
 ---
 
 How to export your already created VM and import it on another machine?

@@ -61,5 +61,5 @@ does not depend on the previous actions, we call the problem a contextual bandit
 of available actions with initially unknown rewards, this problem is the classic multi-armed bandit problem.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Nikola Andric
+The Squid
 

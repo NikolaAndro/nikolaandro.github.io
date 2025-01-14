@@ -74,4 +74,4 @@ This means that dynamic Programming is not only recursion with memoization becau
 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Nikola Andrić
+The Squid

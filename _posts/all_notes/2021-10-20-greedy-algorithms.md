@@ -40,7 +40,7 @@ categories: post
     - [*Huffman Codes*](https://nikolaandro.github.io/huffman-encoding/)
     
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- Nikola Andrić
+ The Squid
  
  
 

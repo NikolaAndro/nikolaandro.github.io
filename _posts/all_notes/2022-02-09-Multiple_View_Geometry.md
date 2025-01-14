@@ -3,6 +3,7 @@ layout: post
 title:  "Multiple View Geometry"
 date:   2022-02-09 09:29:20 +0700
 categories: post
+topic: computer vision
 ---
 
 Notes taken from:

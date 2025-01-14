@@ -114,6 +114,6 @@ categories: post
  *Variation of this problem is to decode the given sequence of bits.*
  
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
- Nikola Andrić
+ The Squid
 
  

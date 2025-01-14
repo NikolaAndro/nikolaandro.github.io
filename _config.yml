@@ -1,7 +1,7 @@
 # Site settings
-title: Nikola Andrić Notes # site title
+title: Squid's Notes # site title
 description: >- # site description
-  Notes from Nikola.<a href="https://github.com/NikolaAndro" target="_blank" rel="noopener">@github</a>.
+  Notes from The Squid.<a href="https://github.com/NikolaAndro" target="_blank" rel="noopener">@github</a>.
 lang: en-US # default lang
 timezone: NorthAmerica/USA/Missouri # set your timezone
 image: assets/img/cover.png # This image used for Open Graph more info https://ogp.me/
@@ -10,15 +10,15 @@ mode: dark # default theme "dark" | "light"
 
 # Profile settings
 author:
-  name: Nikola Andrić # author name
+  name: The Squid # author name
   bio: >- # tell to the world
-    Notes of computer science topics. More specifically on AI, ML, Big Data Management and programming in general. My projects can be found at <a href="https://github.com/NikolaAndro" target="_blank" rel="noopener">@github</a>.
+    Notes of computer science topics. More specifically on AI, ML, programming in general, and a bit about finance. My projects can be found at <a href="https://github.com/NikolaAndro" target="_blank" rel="noopener">@github</a>.
   username: username # general username
   github: NikolaAndro # github username
   twitter: twitter_username # twitter username
   facebook: facebook_username # facebook username
   email: nikolazeljkoandric@gmail.com # email adress
-  avatar: /assets/img/avatar.jpg # change with your own avatar
+  avatar: /assets/img/theSquid.jpg # change with your own avatar
 
 # URL settings
 url: "https://nikolaandro.github.io" 
@@ -58,7 +58,7 @@ jekyll_compose:
     description:
 
 # Homepage limit posts
-number_of_posts: 5
+number_of_posts: 10
 
 # Build settings
 # theme: klise

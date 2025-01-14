@@ -28,4 +28,4 @@ The car has sensors that determines the position of objects, as well as a model 
 [Examples](https://github.com/NikolaAndro/Kalman_Filters)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Nikola Andrić
+The Squid

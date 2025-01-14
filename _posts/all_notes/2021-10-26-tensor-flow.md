@@ -3,6 +3,7 @@ layout: post
 title:  "TensorFlow - Python"
 date:   2021-10-26 09:29:20 +0700
 categories: post
+topic: neural networks
 ---
 \usepackage{amsmath}
 
@@ -311,5 +312,5 @@ print(color.numpy())
 {%endhighlight%}
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Nikola Andric
+The Squid
 

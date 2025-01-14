@@ -3,6 +3,7 @@ layout: post
 title:  "Create a shared folder in Linux"
 date:   2022-10-06 09:29:20 +0700
 categories: post
+topic: linux
 ---
 How to create a shared folder on Linux VM?
 

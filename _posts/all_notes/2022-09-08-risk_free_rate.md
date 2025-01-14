@@ -3,6 +3,7 @@ layout: post
 title:  "Risk-Free Rate"
 date:   2022-09-08 09:29:20 +0700
 categories: post
+topic: finance
 ---
 
 In this note, I will be posting things as I learn, so there will be no order. 

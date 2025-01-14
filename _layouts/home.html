@@ -2,8 +2,59 @@
 layout: default
 home: true
 ---
+{% assign grouped_posts = site.posts | group_by: 'topic' %}
+{% for group in grouped_posts %}
+  {% if group.name %}
+    <h3 class="posts-topic" style="text-align: center;">
+      <a href="#{{ group.name | downcase }}">{{ group.name | capitalize }}</a>
+    </h3>
+    <hr style="border: 0.5px solid rgba(83, 83, 83, 0.445);">
+    <div id="{{ group.name | downcase }}" style="display: none;">
+      {%- for post in group.items %}
+        <article class="post-item">
+          <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
+          <h4 class="post-item-title">
+            <a href="{{ post.url }}">{{ post.title | escape }}</a>
+          </h4>
+        </article>
+      {%- endfor -%}
+    </div>
+  {% endif %}
+{% endfor %}
 
-<h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
+<h3 class="posts-topic" style="text-align: center;">
+  <a href="#unassigned">Unassigned Posts</a>
+</h3>
+<hr style="border: 0.5px solid rgba(83, 83, 83, 0.445);">
+<div id="unassigned" style="display: none;">
+  {%- for post in site.posts %}
+    {% if post.topic == null %}
+      <article class="post-item">
+        <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
+        <h4 class="post-item-title">
+          <a href="{{ post.url }}">{{ post.title | escape }}</a>
+        </h4>
+      </article>
+    {% endif %}
+  {%- endfor -%}
+</div>
+
+<script>
+  document.querySelectorAll('.posts-topic a').forEach(function(topicLink) {
+    topicLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      var topicId = this.getAttribute('href').substring(1);
+      var topicDiv = document.getElementById(topicId);
+      if (topicDiv.style.display === 'none') {
+        topicDiv.style.display = 'block';
+      } else {
+        topicDiv.style.display = 'none';
+      }
+    });
+  });
+</script>
+<br>
+<!-- <h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
 {%- for post in site.posts limit: site.number_of_posts -%}
 <article class="post-item">
   <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
@@ -11,6 +62,5 @@ home: true
     <a href="{{ post.url }}">{{ post.title | escape }}</a>
   </h4>
 </article>
-{%- endfor -%}
-
-<a href="https://nikolaandro.github.io/archive/">archive</a>
+{%- endfor -%} -->
+<br>

@@ -55,4 +55,4 @@ Now, assume that you built a classifier and trained it to predict if a mushroom 
 - Support Vector Machine
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Nikola Andric
+The Squid

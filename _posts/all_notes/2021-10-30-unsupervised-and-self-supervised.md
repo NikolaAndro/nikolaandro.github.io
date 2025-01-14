@@ -45,4 +45,4 @@ In these two examples of self-supervised learning,
 training models to predict possible words and relative positions are both classification tasks (from supervised learning).
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-Nikola Andric
+The Squid
