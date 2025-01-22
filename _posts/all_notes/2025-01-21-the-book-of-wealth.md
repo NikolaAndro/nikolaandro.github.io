@@ -7,18 +7,18 @@ topic: books
 ---
 
 
-# Ch. 1 - The Wealth Building Formula
+# Ch. 1. The Wealth Building Formula
 
 - Step 1: Earn more than you spend.
 - Step 2: Invest the surplus.
 - Step 3: Protect your money from loss.
 - Step 4: Repeat these steps.
 
-# Ch2. - How To Accelerate Your Wealth Creation
+# Ch. 2. How To Accelerate Your Wealth Creation
 
 ## Bottom line
 
-> Shift your focus to increasing the income. You can only cut spending so much.
+> ***<span style="color:yellow;">Shift your focus to increasing the income. You can only cut spending so much.</span>***
 
 Brian offers his mistakes as an opportunity to learn from them and not make the same mistakes.
 
@@ -80,15 +80,15 @@ This became his new focus.<span style="color:yellow;"> He stopped seeing investi
 
 To significantly increase your income, commit to one field and become an expoer. Reaching the top of your field allows you to command a higher level of compensation.
 
-> <span style="color:red;">Mastery doesn't limit you; it opens doors</span>
+> ***<span style="color:red;">Mastery doesn't limit you; it opens doors</span>***
 
 You can leverage you experise to branch into new areas, furhter boosting your income. 
 
-> <span style="color:red;">Master your field, and the market will reward you.</span>
+> ***<span style="color:red;">Master your field, and the market will reward you.</span>***
 
 Comes back to the saying:
 
-> <span style="color:red;">Be good at what you do and money will find you.</span>
+> ***<span style="color:red;">Be good at what you do and money will find you.</span>***
 
 
 ## How To Become an Expert
@@ -102,7 +102,7 @@ The key factors:
 
 Make the most out of your time at work. Ask for new opportunities and try to gain more skills.
 
-<span style="color:yellow;">***The effort you put in is entirely up to you - that drive must come from within.***</span>
+***<span style="color:yellow;">The effort you put in is entirely up to you - that drive must come from within.</span>***
 
 That is why it is crucial to choose a field or job you enjoy or at least don't mind. When you're in an area that plays to your strengths, putting in the effort becomes easier. But if you are stuck in a job that makes you miserable, it will be hard to stay motivated.
 
@@ -110,7 +110,7 @@ That is why it is crucial to choose a field or job you enjoy or at least don't m
 
 The more years of experience youo have in a certain field, the more opportunities you will have in that field and higher-profile assignments.
 
-<span style="color:yellow;">***The time you spend in your field is an investment, and how you use that time determines your success. If you want to increase your income, becoming an expert is key. Expertise takes time and effort, so it's important to choose a field you can commit to for the long term. As your experience grows, so will your value, and that will be reflected in your earnings.***</span>
+***<span style="color:yellow;">The time you spend in your field is an investment, and how you use that time determines your success. If you want to increase your income, becoming an expert is key. Expertise takes time and effort, so it's important to choose a field you can commit to for the long term. As your experience grows, so will your value, and that will be reflected in your earnings.</span>***
 
 ## Switching Careers
 
@@ -128,7 +128,7 @@ Practical steps to get noticed and show the value of your expertise:
 2. Network within your industry - attend conferences, webinars, or emetups to interact with peers
 3. Ask for recommendations 
 
-> <span style="color:yellow;">***Don't just be the best - make sure people know it.***
+> ***<span style="color:yellow;">Don't just be the best - make sure people know it.</span>***
 
-# Ch. 3 - How To ACchieve Consistent Wealth Growth
+# Ch. 3. How To ACchieve Consistent Wealth Growth
 
