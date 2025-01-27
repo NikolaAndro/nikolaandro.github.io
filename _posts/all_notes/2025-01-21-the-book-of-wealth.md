@@ -230,3 +230,5 @@ Bonds are fixed-income investments where you lend money to a corporation or gove
 Thoughtful investing in real estate can provide both rental income and property appreciation. Whether residential or commercial, real estate can be a stable income source.
 
 
+# Ch. 5. Escape The Dept Trap
+
