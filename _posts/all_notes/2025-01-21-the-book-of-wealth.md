@@ -232,3 +232,29 @@ Thoughtful investing in real estate can provide both rental income and property 
 
 # Ch. 5. Escape The Dept Trap
 
+
+If in dept, it comes down to paying the dept off as soon as possible. First pay the highest interest off.
+
+## Is All Debt Bad?
+
+No (with a risk).
+
+### Example 1:
+
+If you can borrow money at 3% interest rate and invest it into an opportunity that yields 8% profit, you are gaining 5%.
+
+### Example 2:
+
+What if you borrow money at 3% rate and invest in stock market that can return on average 8-12%?
+
+Ultimately, for debt not to be bad, there is a risk involved of possibly not getting expected returns on your investment and having to pay the debt out of pocket.
+
+## Beware of Lifestyle Inflation
+
+When you get a raise or start making more money some other way, do not fall into a trap by increasing your spending. It is ok to reward yourself once or twice, but if you increase your expenses and you are making more money, ultimatelly you are saving the same amount of money as before the raise. It comes down to maintaining your expences even when you get a raise in order to save more and get to the financial freedom faster.
+
+# Ch. 6. Protect Your Wealth From Setbacks
+
+
+
+
