@@ -255,6 +255,58 @@ When you get a raise or start making more money some other way, do not fall into
 
 # Ch. 6. Protect Your Wealth From Setbacks
 
+Setbacks are a natural part of the building wealth journey. What truly matters is how you prepare for and respond to them, ensuring they don't derail your progress.
+
+## Stock Market Crashes Are Inevitable
+
+Stay calm, be diversified, and avoid letting short-term anxiety in case of a market crash guide your decisions. Historically, the stock market has always recovered from crashes, rewarding those who maintain discipline.
+
+## The Danger Of Following Hot Tips
+
+ALWAYS verify the investment tips before diving in. Even when the advice comes from trusted sources like friends, family, or financial advisors, it's essential to do your own research. Those offering the tips may have good intentions, but can still be wrong, and ultimately, you are the one that bears the consequences.
+
+## The Hidden Risk Of Complexity
+
+When faced with complex investments, if you do not fully understand the risks, it's best not to proceed. Simplicity often protects wealth more effectively than complexity.
+
+Most people make costly mistakes chasing bigger returns through investments they do not fully understand. Simple investments, like index funds or real estate, may not seem as exciting, but they come with significantly less risk and fewer chances for things to go wrong.
+
+## The Hidden Danger of Debt
+
+Using dept can amplify your gains, but it also increases the risk of significant losses when conditions take a turn for the worse. I can be very bad. Do not undermine the risks and always investigate worse case scenario.
+
+## The Importance Of Insurance And Preparedness
+
+Do not cut corners on insurance. Take time to review the policies to make sure you have the coverage you need. If you do not have insurance, one disaster can be catastrophic for your finances.
+
+## Avoid Landing Money
+
+Lending money to friends or family may feel like the right thing to do, but often backfires both financially and emotionally.
+
+If they do not return the money on time, you will start asking for it and eventually your relationship with that person will possibly be ruined.
+
+When friends ask for money, offer what you can as a gift, not a loan. If they don't accept, that is their choice. By giving instead of lending, you avoid the stress of unpaid debts and preserve the relationship.
+
+## Overcoming Setbacks On Your Wealth Journey
+
+Setbacks are a natural part of the wealth-building process.
+
+What matters is how well-prepared and resilient you are when challenges arise.
+
+Resilience means having the right mindset and strategies to recover when adversity strikes. Building wealth is not about a smooth, uninterrupted path. It's about navigating the inevitable obstacles with preparation and a long-term perspective.
+
+# Ch. 7. Capitalize On Wealth Opportunities
+
+## Stock Market Crashes
+You should not be scared of a market crash. Rather, you should be ready to invest as this is a golden opportunity to buy high-quality stocks at a discount.
+
+You should not go all-in, but invest more heavily. Therefore, you need to maintain a cash reserve or liquid assets to be ready to take advantage of these moments. But, do not hold too much in reserve as you will not earn much if the market does not crash. Also, keep the reserves in a savings account that has an interest rate higher than inflation so the value of your money does not erode.
+
+> ***<span style="color:yellow;">Build your market-crash reserve - take advantage of market crash opportunities.</span>***
+
+## Real Estate Crashes
+
+
 
 
 
