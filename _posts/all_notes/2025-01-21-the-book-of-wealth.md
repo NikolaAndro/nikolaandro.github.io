@@ -401,3 +401,88 @@ This is a lifetime choice. It's about questioning, improving, and expanding your
 
 # Ch. 9. Routines That Build Wealth
 
+Without a routine, staying consistent with achieving your goals is very difficult.
+Routine helps yiu focus on the most important tasks with
+minimal distractions and minimal willpower expenditure so you
+can use that willpower for more important things.
+
+## Routines For Self-employed
+
+If you are self empleyed, then having a routine is even more
+important as you don't have a boss to supervise your work.
+
+While having your own business can have great advantages,
+the business can quickly go down if not disciplined enough. 
+Therefore, routine would help!
+
+## Flexibility and Avoiding Burnout
+
+It's very important to be flexible with your routine
+and have planned breaks to avoid burnouts and maintain
+your productivity. 
+
+## Don't Overlook These Elements In Your Routine
+
+You should not just focus on your primary tasks. It is 
+very important to make room for learning, experimentation, and
+even failure. Faulure is a natural part of growth.
+
+You can't improve without trying new things, taking
+calculated risks, and learning from mistakes.
+
+Build a routine that allows time for trial and error.
+
+It is also essential to set measurable goals so you can
+track your progress over time.
+
+## Streamline Wealth-Building With Automation
+
+One of the most effective routines for building wealth is
+automating your savings and investments.
+Each time you get paid, set up automatic transfers to your
+retirement, brokerage, or savings account.
+This practice of paying yourself first ensures that a portion
+of your income is always directed toward growing your wealth.
+
+This routine immensely helps maintain the wealth growth consistency.
+
+Automation removes the temptation to spend money that should be saved.
+
+## Accountability 
+
+Don't rely on willpower alone. Create systems to keep yourself on track.
+Weather its using checklists, tracking progress apps,
+, etc.
+
+## The danger of over-ambitious goals
+
+One common mistake is creating a routine that's
+too ambitious. Overloading your schedule can quickly lead
+to a burnout and frustration, making it more likely
+to abendon the routine all together.
+
+Another pitfall is getting discouraged when you don't
+see quick results. Routines are about steady, incremental progress,
+not overnight transformations. It is crucial to 
+remain patient and trust the process.
+
+## Commit to Your Routine and Build Your Wealth
+ 
+Doutines are about building consistency and creating a
+clear path toward your goals. They shouldn't feel ; instead,
+they should empower you by simplifying daily decisions and keeping you focused
+on what truly matters.
+
+Start small, stay flexible, and adjust as needed.
+
+# The Decision To Become Wealthy
+
+## Create a resistant mentality
+
+To stay on tract you need a resistant mentality. 
+This means staying focused on your goals even when temptations and challenges arise.
+
+## Wealth is a choice 
+
+Becoming wealthy is a choice you make every day.
+Challenges will come, but by staying focused and resilient you will overcome them.
