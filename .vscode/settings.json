@@ -1,0 +1,15 @@
+{
+    "multiCommand.commands": [
+      {
+          "command": "multiCommand.wrapWithPurple",
+          "sequence": [
+              {
+                  "command": "editor.action.insertSnippet",
+                  "args": {
+                      "snippet": "<span style=\"color: purple;\">${TM_SELECTED_TEXT}</span>"
+                  }
+              }
+          ]
+      }
+  ]
+}
