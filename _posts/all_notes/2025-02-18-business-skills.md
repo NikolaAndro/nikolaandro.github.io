@@ -29,3 +29,9 @@ Creative things need to be done in order to jump over the barriers.
 ## 6. Strong Foundation
 
 Greatest victories in business often begin with the smallest moves.
+
+## 7. Real Estate
+
+## 8. Stock Market
+
+## 9. Economy

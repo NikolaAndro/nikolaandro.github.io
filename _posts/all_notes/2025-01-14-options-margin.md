@@ -6,6 +6,11 @@ categories: post
 topic: finance
 ---
 
+## Links
+
+[The Margin Investor - how portfolio margin works?](http://www.themargininvestor.com/how-portfolio-margin-works.html)
+
+
 
 ## What is Margin?
 
