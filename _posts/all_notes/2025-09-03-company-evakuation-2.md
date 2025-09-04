@@ -1,4 +1,9 @@
-
+---
+layout: post
+title:  "Company Evaluation 2"
+date:   2025-09-03 09:29:20 +0700
+categories: post
+topic: finance
 ---
 
 # The 7-Step Blueprint for Evaluating a Generational Company
